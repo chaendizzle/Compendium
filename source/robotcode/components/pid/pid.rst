@@ -12,6 +12,7 @@ The guide for PIDSources and PIDOutputs is intended for those who understand how
 	:maxdepth: 10
 	:caption: Contents:
 	
+	pidcontroller0
 	pidcontroller1
 	pidcontroller2
 	pidsource
