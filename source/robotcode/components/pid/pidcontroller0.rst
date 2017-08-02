@@ -129,7 +129,7 @@ We can do this by examining how fast we're approaching the target. This is calle
     double derivative = (old - error) * deltaTime;
     double old = error;
 
-    // the constant multiplier linking the integral of error to output
+    // the constant multiplier linking the derivative of error to output
     double D = 0.01;
 
 Now, our controller looks like this:
@@ -155,7 +155,7 @@ Now, our controller looks like this:
         double derivative = (old - error) * deltaTime;
         double old = error;
 
-        // the constant multiplier linking the integral of error to output
+        // the constant multiplier linking the derivative of error to output
         double D = 0.01;
 
         motor.set((error * P) + (integral * I) + (derivative * D));

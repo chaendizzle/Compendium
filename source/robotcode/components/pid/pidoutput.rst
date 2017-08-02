@@ -1,7 +1,7 @@
 PID Outputs
 ===========
 
-Note: This guide is mainly for advanced users. For basic use, see `PIDControllers <pidcontroller.html>`_.
+Note: This guide is mainly for advanced users. For basic use, see `PIDControllers <pidcontroller1.html>`_.
 This guide also requires knowledge about how to use Interfaces.
 
 Remember that a PIDController's basic structure is kind of like this:
