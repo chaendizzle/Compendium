@@ -161,9 +161,13 @@ Now, our controller looks like this:
         motor.set((error * P) + (integral * I) + (derivative * D));
     }
 
-Now, this is exactly what a PID Controller is. It's like a self-contained command, that takes the P, I, and D values, calculates the error, integral, and derivative, and outputs to the motor.
+Now, this is exactly what a PID Controller is. It's like a self-contained command, that takes the P, I, and D values, calculates the error, integral, and derivative, and outputs to the motor. So, instead of making this command by hand, we simply need to create a PIDController and enable it.
 
 In practice, though, usually just a P value works here, with I and D left as 0. If not, then a P and an I value will usually do the trick, with D left as 0. We rarely ever use P, I, and D all together, since usually, a PID can be tuned enough even without all three, and a D value would then just waste time and be unnecessarily complex.
+
+On how to use a PID Controller, see `Using PID Controllers <pidcontroller1.html>`_.
+
+On how to tune a PID Controller, see `Tuning PID Controllers <pidcontroller2.html>`_.
 
 .. toctree::
 	:glob:
