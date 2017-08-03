@@ -8,6 +8,8 @@ A reed switch is a DigitalInput that senses the presence of a magnetic field. It
 
 Note that some reed switches are active low, meaning that they normally return true, and only return false when a magnet is near. In this case, it will have to be manually flipped in code. Keep this in mind if a reed switch does not work as expected.
 
+In code, this is used as a `DigitalInput <digitalinputs.html>`_.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

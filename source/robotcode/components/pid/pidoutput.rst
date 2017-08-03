@@ -58,7 +58,7 @@ Then, the class needs to know what the speed controllers are. Add these to the m
         SpeedController LEFT_BACK;
         SpeedController RIGHT_FRONT;
         SpeedController RIGHT_BACK;
-	    
+        
         public DrivePIDOutput(SpeedController LEFT_FRONT, SpeedController LEFT_BACK, SpeedController RIGHT_FRONT, SpeedController RIGHT_BACK)
         {
             this.LEFT_FRONT = LEFT_FRONT;

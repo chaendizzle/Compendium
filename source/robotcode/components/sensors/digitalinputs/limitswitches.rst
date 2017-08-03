@@ -10,6 +10,8 @@ Sometimes, the limit switch’s true/false will be flipped due to flipped wiring
 
 These are often used as a way to stop a belt at either of its two ends, or detect the presence of something that presses against it.
 
+In code, this is used as a `DigitalInput <digitalinputs.html>`_.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

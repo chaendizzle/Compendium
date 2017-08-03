@@ -7,3 +7,11 @@ These are some tasks that software members commonly must do, so it is good to kn
 	:glob:
 	:maxdepth: 10
 	:caption: Contents
+
+	pins
+	drivercontrols
+	integration
+	commands/commands
+	subsystems/subsystems
+	autonomous/autonomous
+	svn/svn
