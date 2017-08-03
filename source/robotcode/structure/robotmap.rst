@@ -8,7 +8,7 @@ For example, RobotMap would contain:
 
 .. code-block:: java
 
-	public final int DRIVE_LEFT_FRONT_PIN = 3;
+	public static final int DRIVE_LEFT_FRONT_PIN = 3;
 	
 And then in the Drive subsystem, there would be something like:
 
@@ -17,6 +17,8 @@ And then in the Drive subsystem, there would be something like:
 	LEFT_FRONT = new Talon(RobotMap.DRIVE_LEFT_FRONT_PIN);
 
 DO NOT put the actual components, such as Talons and Solenoids, into RobotMap. RobotMap is for pins only. Leave the actual components to their respective subsystems.
+
+Also remember that everything in this class should be static and final.
 
 For DoubleSolenoids, remember that there are 2 pins per DoubleSolenoid, so there will need to be a pin A and a pin B for each.
 

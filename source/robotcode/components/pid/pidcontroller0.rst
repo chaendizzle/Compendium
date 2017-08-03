@@ -3,6 +3,8 @@ Why use a PID Controller?
 
 This section focuses on the reasons for using a PID Controller, and their advantage over other systems that we may write.
 
+A PID Controller is a way to use a sensor to control a motor, without the motor jerking around and going crazy. Instead, a PID Controller has 3 adjustable values that can be tuned to make the motor behave nicely.
+
 Imagine that we want a motor to turn 1000 encoder ticks. One simple way might be:
 
 .. code-block:: java
@@ -25,7 +27,7 @@ Imagine that we want a motor to turn 1000 encoder ticks. One simple way might be
         }
     }
 
-But, this code has problems. Note how if encoder is even one tick off, the motor will still turn at full power. For example, if it's at 999 ticks, it will still continue to turn at full power forward, causing it to overshoot by far, due to the momentum of the motor's spinning.
+But, this code has problems. Note how if encoder is even one tick off, the motor will still turn at full power. For example, if it's at 999 ticks, it will still continue to turn at full power forward, causing it to overshoot by far, due to the momentum of the motor's spinning. It will then try to go back, and then start oscillating back and forth, trying to reach 1000 ticks.
 
 That means we want to slow down the motor as we get closer and closer to the goal. One way to do this is to directly relate how far we are from the goal to how much power we give to the motor. That way, the closer we get the goal, the less power we give to the motor, slowing it down.
 
@@ -126,8 +128,8 @@ We can do this by examining how fast we're approaching the target. This is calle
 .. code-block:: java
     
     // calculate derivative (if you don't know calculus, don't bother)
-    double derivative = (old - error) * deltaTime;
-    double old = error;
+    double derivative = (error - old) / deltaTime;
+    old = error;
 
     // the constant multiplier linking the derivative of error to output
     double D = 0.01;
@@ -152,8 +154,8 @@ Now, our controller looks like this:
         double I = 0.0005;
 
         // calculate derivative (if you don't know calculus, don't bother)
-        double derivative = (old - error) * deltaTime;
-        double old = error;
+        double derivative = (error - old) / deltaTime;
+        old = error;
 
         // the constant multiplier linking the derivative of error to output
         double D = 0.01;
@@ -164,6 +166,8 @@ Now, our controller looks like this:
 Now, this is exactly what a PID Controller is. It's like a self-contained command, that takes the P, I, and D values, calculates the error, integral, and derivative, and outputs to the motor. So, instead of making this command by hand, we simply need to create a PIDController and enable it.
 
 In practice, though, usually just a P value works here, with I and D left as 0. If not, then a P and an I value will usually do the trick, with D left as 0. We rarely ever use P, I, and D all together, since usually, a PID can be tuned enough even without all three, and a D value would then just waste time and be unnecessarily complex.
+
+Although well tuned PID Controllers can work very well, note that a poorly tuned PID Controller still can jerk around and go crazy, which is something called "Possessed Robot Syndrome".
 
 On how to use a PID Controller, see `Using PID Controllers <pidcontroller1.html>`_.
 

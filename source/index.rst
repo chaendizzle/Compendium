@@ -6,6 +6,8 @@
 Welcome to Evans Chen's Software Guide!
 =======================================
 
+This is Evans Chen’s compendium of software knowledge accumulated while he was on the team. Hopefully, this short collection of information can serve software for future generations.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10
@@ -14,5 +16,3 @@ Welcome to Evans Chen's Software Guide!
 	installation/installation
 	robotcode/robotcode
 	tasks/tasks
-   
-This is Evans Chen’s compendium of software knowledge accumulated while he was on the team. Hopefully, this short collection of information can serve software for future generations.

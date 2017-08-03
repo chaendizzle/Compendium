@@ -4,7 +4,7 @@ OI
 OI stands for Operator interface. This static class contains all the components pertaining to user input. For example, Joysticks, Joystick buttons and their event handlers go here.
 
  - In the class:
-	Joystick and Button declarations
+	Joystick and Button declarations. Everything should be static.
 
  - Constructor, or a static initializer
 	Joystick and Button initialization, and binding of commands to buttons.
@@ -13,13 +13,15 @@ Each controller has a port in the Driver Station, which is used in initializatio
 
 .. code-block:: java
 
-	Joystick driver = new Joystick(0);
+	public static Joystick driver = new Joystick(0);
+
+Remember that everything in the class should be static.
 
 Example for a button on a controller:
 
 .. code-block:: java
 
-	JoystickButton driverA = new Joystick(1);
+	Button driverA = new JoystickButton(driver, 1);
 	driverA.whenPressed(new DriveBackwards(1000, 10));
 
 Note that button numbers are different for every controller type. The button number will have to be found experimentally on the Driver Station.
