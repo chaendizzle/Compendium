@@ -95,19 +95,19 @@ It is usually easy to write a command group's plan in code. The only difficulty 
 
 Here are some examples of command groups:
 
- - `Deflector Flip <examples/deflector.html>`_
+ - `Deflector Flip <examples/commandgroups/deflector.html>`_
  	Pushes a piece of plastic down, and then back up, to dislodge any gears stuck on top of it. 
 
- - `Acquire gear from a wall <examples/wallacquire.html>`_
+ - `Acquire gear from a wall <examples/commandgroups/wallacquire.html>`_
  	Goes through the sequence of events that prepares the robot to acquire a gear from the wall.
 
- - `Shooting sequence <examples/shootingsequence.html>`_
+ - `Shooting sequence <examples/commandgroups/shootingsequence.html>`_
  	Prepares the shot and then shoots.
 
- - `Basic autonomous <examples/autonomous.html>`_
+ - `Basic autonomous <examples/commandgroups/autonomous.html>`_
  	Example of one autonomous plan.
 
- - `Autonomous chooser <examples/autonomouschooser.html>`_
+ - `Autonomous chooser <examples/commandgroups/autonomouschooser.html>`_
  	A list of autonomous plans that can be chosen in SmartDashboard.
 
 List of example command groups:

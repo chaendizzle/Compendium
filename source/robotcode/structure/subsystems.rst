@@ -7,6 +7,8 @@ Subsystems can also define a default command. Then, as long as the subsystem is 
 
 However, a subsystem also holds the components that its commands use. For example, the Drive subsystem would hold the speed controllers that turn the robot’s drive wheels, the encoders that measure drive distance, and any PID controllers used to control the robot’s driving.
 
+Subsystems, similar to RobotMap and OI, should be static, meaning that all of their components should be static.
+
  - In the class:
 	Declare all of the components of that subsystem, including SpeedControllers, Solenoids, Sensors, PID Controllers, and any utilities used.
  - Constructor:

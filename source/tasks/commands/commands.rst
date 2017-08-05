@@ -97,28 +97,28 @@ Press **Finish**, and it should be created.
 
 Now, it's time to actually write the command. Since this varies greatly from command to command, there isn't really any one clear formula for this. If you already have a plan, however, writing the command is simply just following the plan and calling on subsystem methods. See `Commands <./../../robotcode/structure/commands.html>`_ for what to put in each method, and follow these examples for guidance:
 
- - `Climber <examples/climber.html>`_
+ - `Climber <examples/commands/climber.html>`_
  	Manual control of a motor that is programmed to never spin backwards.
 
- - `Tank Drive <examples/tankdrive.html>`_
+ - `Tank Drive <examples/commands/tankdrive.html>`_
  	A basic tank drive. Left joystick controls the left wheels, right joystick controls the right wheels.
 
- - `Ball Acquisition <examples/bacq.html>`_
+ - `Ball Acquisition <examples/commands/bacq.html>`_
  	A command that prevents balls from accidentally falling out of a claw using intake wheels.
 
- - `Open and Close a Claw <examples/claw.html>`_
+ - `Open and Close a Claw <examples/commands/claw.html>`_
  	Opening or closing a claw using pneumatics.
 
- - `Wait for an amount of time <examples/sleep.html>`_
+ - `Wait for an amount of time <examples/commands/sleep.html>`_
  	Command that just waits. Often useful for timing purposes in autonomous code, or as a safety net to be used in command groups.
 
- - `Moving an Elevator Manually <examples/elevatormanual.html>`_
+ - `Moving an Elevator Manually <examples/commands/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
- - `Moving an Elevator to Setpoint <examples/elevatorsetpoint.html>`_
+ - `Moving an Elevator to Setpoint <examples/commands/elevatorsetpoint.html>`_
  	Moving the elevator to certain setpoints using PIDs.
 
- - `Aiming a Shooter both Manually and using Setpoints <examples/aimshooter.html>`_
+ - `Aiming a Shooter both Manually and using Setpoints <examples/commands/aimshooter.html>`_
  	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way.
 
 List of example commands:
@@ -126,7 +126,6 @@ List of example commands:
 .. toctree::
 	:glob:
 	:maxdepth: 10
-	:caption: Content
 	
 	examples/commandexamples
 
