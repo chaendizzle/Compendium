@@ -110,18 +110,15 @@ Here are some examples of command groups:
  - `Autonomous chooser <examples/autonomouschooser.html>`_
  	A list of autonomous plans that can be chosen in SmartDashboard.
 
-3. Run the command group
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Since a CommandGroup is also a Command, you can run a CommandGroup in the same way as you would `run a command <commands.html#running-the-command>`_.
+List of example command groups:
 
 .. toctree::
 	:glob:
 	:maxdepth: 10
-	:caption: Contents
 
-	examples/commandgroups/deflector
-	examples/commandgroups/wallacquire
-	examples/commandgroups/shootingsequence
-	examples/commandgroups/autonomous
-	examples/commandgroups/autonomouschooser
+	examples/commandgroupexamples
+
+3. Run the command group
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Since a CommandGroup is also a Command, you can run a CommandGroup in the same way as you would `run a command <commands.html#running-the-command>`_.

@@ -1,5 +1,5 @@
-Open and Close a Claw
-=====================
+Acquire gear from a wall
+========================
 
 
 

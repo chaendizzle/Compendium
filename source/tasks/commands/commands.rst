@@ -121,6 +121,15 @@ Now, it's time to actually write the command. Since this varies greatly from com
  - `Aiming a Shooter both Manually and using Setpoints <examples/aimshooter.html>`_
  	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way.
 
+List of example commands:
+
+.. toctree::
+	:glob:
+	:maxdepth: 10
+	:caption: Content
+	
+	examples/commandexamples
+
 3. Running the command
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -176,18 +185,3 @@ Now that the command is all written, the robot has to run it. There are several 
  		yourCommandNameHere.cancel();
 
 And that's it! All that's left is to test the command until you're sure it works.
-
-.. toctree::
-	:glob:
-	:maxdepth: 10
-	:caption: Contents
-	:hidden:
-	
-	examples/commands/climber
-	examples/commands/tankdrive
-	examples/commands/bacq
-	examples/commands/claw
-	examples/commands/sleep
-	examples/commands/elevatormanual
-	examples/commands/elevatorsetpoint
-	examples/commands/aimshooter

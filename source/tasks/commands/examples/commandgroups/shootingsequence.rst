@@ -1,5 +1,5 @@
-Climber
-=======
+Shooting sequence
+=================
 
 
 
