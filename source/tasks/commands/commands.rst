@@ -109,6 +109,9 @@ Now, it's time to actually write the command. Since this varies greatly from com
  - `Open and Close a Claw <examples/claw.html>`_
  	Opening or closing a claw using pneumatics.
 
+ - `Wait for an amount of time <examples/sleep.html>`_
+ 	Command that just waits. Often useful for timing purposes in autonomous code, or as a safety net to be used in command groups.
+
  - `Moving an Elevator Manually <examples/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
@@ -137,7 +140,7 @@ Now that the command is all written, the robot has to run it. There are several 
 
  	.. code-block:: java
 
- 		joystickA.whenPressed(new DriveForwards(1000.0, 10.0));
+ 		joystickA.whenPressed(new YourCommandNameHere());
 
  	Then, any time the button is pressed, the command will start.
 
@@ -152,7 +155,7 @@ Now that the command is all written, the robot has to run it. There are several 
  		@Override
 		public void initDefaultCommand()
 		{
-			setDefaultCommand(new DriveContinuous());
+		    setDefaultCommand(new YourCommandNameHere());
 		}
 
  - The command should be started once at the beginning of autonomous or teleop mode and never again or it never ends or should be interrupted:
@@ -163,14 +166,14 @@ Now that the command is all written, the robot has to run it. There are several 
 
  	.. code-block:: java
 
- 		Command autonomousCommand = new AutonomousCommand();
- 		autonomousCommand.start();
+ 		Command yourCommandNameHere = new YourCommandNameHere();
+ 		yourCommandNameHere.start();
 
  	Then, when the command needs to be canceled, use:
 
  	.. code-block:: java
 
- 		autonomousCommand.cancel();
+ 		yourCommandNameHere.cancel();
 
 And that's it! All that's left is to test the command until you're sure it works.
 
@@ -180,10 +183,11 @@ And that's it! All that's left is to test the command until you're sure it works
 	:caption: Contents
 	:hidden:
 	
-	examples/climber
-	examples/tankdrive
-	examples/bacq
-	examples/claw
-	examples/elevatormanual
-	examples/elevatorsetpoint
-	examples/aimshooter
+	examples/commands/climber
+	examples/commands/tankdrive
+	examples/commands/bacq
+	examples/commands/claw
+	examples/commands/sleep
+	examples/commands/elevatormanual
+	examples/commands/elevatorsetpoint
+	examples/commands/aimshooter
