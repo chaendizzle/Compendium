@@ -63,7 +63,7 @@ With this information, it's hopefully possible to make an easy to follow plan us
 Writing the Command
 -------------------
 
-1. Make the command group object
+1. Make the command group's file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Right click on the project and choose **New** -> **Other**.

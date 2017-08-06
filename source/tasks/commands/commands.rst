@@ -67,7 +67,7 @@ After the plan is complete, then you're ready to dive into actually writing the 
 Writing the Command
 -------------------
 
-1. Make the command object
+1. Make the command's file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Right click on the project and choose **New** -> **Other**.
