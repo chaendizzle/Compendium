@@ -134,7 +134,7 @@ List of example commands:
 
 Now that the command is all written, the robot has to run it. There are several different ways to run a command:
 
- - The command should be linked to a driver/operator button press:
+ - If the command should be linked to a driver/operator button press:
 
  	This way of running a command is used if the command should be under direct control of the driver/operator.
 
@@ -152,7 +152,7 @@ Now that the command is all written, the robot has to run it. There are several 
 
  	Then, any time the button is pressed, the command will start.
 
- - The command is linked to a subsystem, and should always be running unless something else is using the subsystem
+ - If the command is linked to a subsystem, and should always be running unless something else is using the subsystem:
 
  	Running a command by making it a subsystem's default command is used for commands that are tightly linked to their subsystems and should almost always be running, unless something more important is using the subsystem. Examples include DriveContinuous and ManualElevatorControl commands, since, for example, we usually want the driver in control of the robot by default. Remember that a subsystem can only have one default command.
 
@@ -166,7 +166,7 @@ Now that the command is all written, the robot has to run it. There are several 
 		    setDefaultCommand(new YourCommandNameHere());
 		}
 
- - The command should be started once at the beginning of autonomous or teleop mode and never again or it never ends or should be interrupted:
+ - If the command should be started once at the beginning of autonomous or teleop mode and never again or it never ends or should be interrupted:
 
  	Manually starting a command is very rarely useful, but sometimes useful in a pinch or for autonomous reasons, although we use CommandGroups for that anyway.
 

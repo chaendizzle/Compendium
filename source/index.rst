@@ -12,6 +12,7 @@ This is Evans Chen’s compendium of software knowledge accumulated while he was
 	:glob:
 	:maxdepth: 10
 	:caption: Table of Contents
+	:titlesonly:
 	
 	installation/installation
 	robotcode/robotcode

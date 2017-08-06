@@ -13,8 +13,8 @@ Also, note that PID Controller use something called error.
 
 	error = setpoint - sensor.pidGet();
 
-**Initial Guess**
------------------
+Initial Guess
+-------------
 
 The P, or Proportional, value is a direct multiplier from the error to the output. With only a P value, the output would look like:
 
@@ -41,8 +41,8 @@ I stands for Integral, which is a sum of how much "total error" the controller h
 
 D stands for Derivative. We rarely use this, but it's used to tone down the output if we're approaching the setpoint quickly, which decreases overshoot. However, this is hard to tune.
 
-**Tuning**
-----------
+Tuning
+------
 
 The next step is to test the guess. Plug in the guessed values into the PID Controller.
 

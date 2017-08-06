@@ -1,5 +1,5 @@
-Changing Robot Pins
-===================
+Changing Robot Pins in RobotMap
+===============================
 
 
 
