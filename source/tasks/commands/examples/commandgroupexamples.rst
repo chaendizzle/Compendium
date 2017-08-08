@@ -10,12 +10,6 @@ Examples of Command Groups
  - `Shooting sequence <commandgroups/shootingsequence.html>`_
  	Prepares the shot and then shoots.
 
- - `Basic autonomous <commandgroups/autonomous.html>`_
- 	Example of one autonomous plan.
-
- - `Autonomous chooser <commandgroups/autonomouschooser.html>`_
- 	A list of autonomous plans that can be chosen in SmartDashboard.
-
 .. toctree::
 	:glob:
 	:maxdepth: 10
@@ -24,5 +18,3 @@ Examples of Command Groups
 	commandgroups/deflector
 	commandgroups/wallacquire
 	commandgroups/shootingsequence
-	commandgroups/autonomous
-	commandgroups/autonomouschooser
