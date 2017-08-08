@@ -23,6 +23,30 @@ Then, examine the field. Calculate dimensions and distances, and figure out how 
 
 The way to handle this is to have many autonomous plans, and then allow the drivers to choose which one to use. See `Autonomous Chooser <autochooser.html>`_.
 
+At the end, for each starting position, you should have a clear list of commands the robot should take to accomplish its goal, with the calculations already worked out.
+
+Examples (in reality, this will be written out or in your head):
+
+ - Drive Forwards plan:
+
+	drive forwards a quarter of the field length.
+
+ - Place gear plan, position red A:
+
+	.. image:: ./_static/plan.jpg
+	   :width: 60%
+
+	The plan is to drive the robot forward by INITIAL_FORWARD_DISTANCE, then turn to -60 degrees, then drive forward another TURNED_FORWARD_DISTANCE to get to the gear position. HORIZONTAL_DISTANCE describes the distance to the right the robot needs to move, and is used in the calculations.
+
+	.. code-block:: java
+
+		double HORIZONTAL_DISTANCE = HORIZONTAL_DISTANCE_FROM_CENTER + (ROBOT_WIDTH / 2) - (AIRSHIP_SIDE_LENGTH / 2) - (AIRSHIP_SIDE_LENGTH / 4);
+
+		double INITIAL_FORWARD_DISTANCE = DRIVER_STATION_TO_AIRSHIP + (Math.sqrt(3) * AIRSHIP_SIDE_LENGTH / 4) - (Math.sqrt(3) * HORIZONTAL_DISTANCE / 3);
+		double TURNED_FORWARD_DISTANCE = 2 * Math.sqrt(3) * HORIZONTAL_DISTANCE / 3;
+
+	Then, drop the gear, wait 0.5 seconds, and back up by 3 feet to make sure we clear the peg.
+
 3. Write the Autonomous Plan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -33,19 +57,57 @@ Now, simply follow the plan you created. As far as movement around the field goe
 .. code-block:: java
 
 	final double FIELD_LENGTH = 648.0;
+	final double TICKS_PER_INCH = 112.5;
 
 	// drive forward halfway across the field
-	addSequential(new DriveForward(FIELD_LENGTH * 0.5));
+	addSequential(new DriveForward(FIELD_LENGTH * 0.5 * TICKS_PER_INCH));
 
 than
 
 .. code-block:: java
 
-	addSequential(new DriveForward(324.0));
+	addSequential(new DriveForward(36450.0));
 
 By putting your commands in terms of field measurements, not only is it easier to adjust to differing field sizes, it's also more readable, since the parameter being passed into the commands are directly related to the math done in the plan that gets the robot to the correct position.
 
 Again, an example is very useful here. If this doesn't make sense, try `Example Autonomous <autoexample.html>`_.
+
+In almost all cases, you're going to need more than one autonomous plan, so try to build in an enum and switch statement into your command group to handle that.
+
+For example, an enum like this would be in the class of AutonomousCommandGroup.
+
+.. code-block:: java
+
+	public enum AutonomousPlan
+	{
+	    NO_AUTONOMOUS, DRIVE_FORWARDS, POSITION_RED_ONE // ... etc.
+	}
+
+Then, in the constructor of the AutonomousCommandGroup, which plan the command group should follow would be passed in:
+
+.. code-block:: java
+	
+	final double FIELD_LENGTH = 648.0;
+	final double TICKS_PER_INCH = 112.5;
+
+	public AutonomousCommandGroup(AutonomousPlan plan)
+	{
+	    switch(plan)
+	    {
+	        case NO_AUTONOMOUS:
+	            // no autonomous
+	            break;
+
+	        case DRIVE_FORWARDS:
+	            // drive forward halfway across the field
+	            addSequential(new DriveForward(FIELD_LENGTH * 0.5 * TICKS_PER_INCH));
+	            break;
+
+	        // ... more plans, etc.
+	    }
+	}
+
+This makes implementing an autonomous chooser easy, and also makes it easy to add more autonomous plans.
 
 4. Testing the Autonomous Plan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
