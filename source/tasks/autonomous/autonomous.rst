@@ -31,21 +31,12 @@ Examples (in reality, this will be written out or in your head):
 
 	drive forwards a quarter of the field length.
 
- - Place gear plan, position red A:
+ - Get to goal past obstacle
 
-	.. image:: ./_static/plan.jpg
-	   :width: 60%
+	.. image:: ./_static/plan.png
+	   :width: 100%
 
-	The plan is to drive the robot forward by INITIAL_FORWARD_DISTANCE, then turn to -60 degrees, then drive forward another TURNED_FORWARD_DISTANCE to get to the gear position. HORIZONTAL_DISTANCE describes the distance to the right the robot needs to move, and is used in the calculations.
-
-	.. code-block:: java
-
-		double HORIZONTAL_DISTANCE = HORIZONTAL_DISTANCE_FROM_CENTER + (ROBOT_WIDTH / 2) - (AIRSHIP_SIDE_LENGTH / 2) - (AIRSHIP_SIDE_LENGTH / 4);
-
-		double INITIAL_FORWARD_DISTANCE = DRIVER_STATION_TO_AIRSHIP + (Math.sqrt(3) * AIRSHIP_SIDE_LENGTH / 4) - (Math.sqrt(3) * HORIZONTAL_DISTANCE / 3);
-		double TURNED_FORWARD_DISTANCE = 2 * Math.sqrt(3) * HORIZONTAL_DISTANCE / 3;
-
-	Then, drop the gear, wait 0.5 seconds, and back up by 3 feet to make sure we clear the peg.
+	The plan is to drive the robot forward by the robot_length, then turn to the right, then drive forwards and clear the obstacle, then turn to face forwards again, then drive to the goal.
 
 3. Write the Autonomous Plan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
