@@ -36,7 +36,11 @@ Examples (in reality, this will be written out or in your head):
 	.. image:: ./_static/plan.png
 	   :width: 100%
 
-	The plan is to drive the robot forward by the robot_length, then turn to the right, then drive forwards and clear the obstacle, then turn to face forwards again, then drive to the goal.
+	1. drive the robot forward by the robot_length
+	2. turn to the right
+	3. drive forwards and clear the obstacle 
+	4. turn to face forwards again
+	5. drive to the goal.
 
 3. Write the Autonomous Plan
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,12 +109,56 @@ This makes implementing an autonomous chooser easy, and also makes it easy to ad
 
 Testing autonomous takes the longest and is possibly the most important part of having a successful autonomous.
 
-On how to test autonomous plans once the robot is ready to test, see `Testing Autonomous <autotesting.html>`_.
+Firstly, make sure the command is running. In autonomousInit(), make sure the autonomous command is getting started. First, add the autonomousCommand to the class.
+
+.. code-block:: java
+
+	Command autonomousCommand;
+
+Then, what you put in autonomousInit() depends on whether you're manually putting in the command to test in code, or using an autonomous chooser. Although an autonmous chooser will likely be in place at a real competition, it may not be in place yet when testing autonomous.
+
+Choosing a command in code, manually:
+
+.. code-block:: java
+
+	@Override
+	public void autonomousInit()
+	{
+	    autonomousCommand = new AutonomousCommandGroup();
+	    autonomousCommand.start();
+	}
+
+Using an autonomous chooser:
+
+.. code-block:: java
+	
+	@Override
+	public void autonomousInit()
+	{
+	    autonomousCommand = chooser.getSelected();
+	    autonomousCommand.start();
+	}
+
+Then, make sure that once teleop starts, to cancel the autonomousCommand.
+
+.. code-block:: java
+
+	@Override
+	public void teleopInit()
+	{
+	    if (autonomousCommand != null)
+	    {
+	        autonomousCommand.cancel();
+	    }
+	}
+
+For more on how to test autonomous plans once the robot is ready to test, see `Testing Autonomous <autotesting.html>`_.
 
 .. toctree::
 	:glob:
 	:maxdepth: 10
 	:caption: Further Reading
+	:titlesonly:
 
 	autoexample
 	autochooser
