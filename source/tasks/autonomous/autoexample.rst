@@ -1,7 +1,7 @@
 Basic autonomous
 ================
 
-
+This is an example of what autonomous code might look like.
 
 .. toctree::
 	:glob:
