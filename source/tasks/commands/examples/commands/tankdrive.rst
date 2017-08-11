@@ -6,7 +6,7 @@ This example describes a basic tank drive, that takes joystick input directly to
 Design
 ------
 
-The design of this drive platform is that it is a tank drive, and there are 3 motors for each side of the robot, and each motor is controlled by a VictorSP speed controller.
+The design of this drive platform is that it is a simple tank drive. There are 3 motors for each side of the robot, and each motor is controlled by a VictorSP speed controller.
 
 Subsystem methods
 -----------------

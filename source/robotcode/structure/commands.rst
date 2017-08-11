@@ -38,7 +38,12 @@ When another command that requires the same subsystem starts, it will interrupt 
 
 Commands go in the org.usfirst.frc.teamXXXX.robot.commands package.
 
+More Command Types
+^^^^^^^^^^^^^^^^^^
+
 .. toctree::
 	:glob:
 	:maxdepth: 10
-	:caption: Contents:
+	:titlesonly:
+	
+	morecommands
