@@ -1,7 +1,9 @@
 OI
 ==
 
-OI stands for Operator interface. This static class contains all the components pertaining to user input. For example, Joysticks, Joystick buttons and their event handlers go here.
+OI stands for Operator interface. This static class contains all the components pertaining to driver input. For example, Joysticks, Joystick buttons and their event handlers go here.
+
+For more information on using Joysticks and driver input, see `Joysticks <./../components/sensors/joysticks.html>`_.
 
  - In the class:
 	Joystick and Button declarations. Everything should be static.

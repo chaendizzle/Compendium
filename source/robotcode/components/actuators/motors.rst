@@ -71,6 +71,8 @@ Also note that speed controllers can break down. If you observe any odd behavior
 
 For Talon SRX’s, make sure to update the firmware before inspection at competitions, otherwise the inspector might not be happy.
 
+When debugging code related to speed controllers, it is helpful to look at the speed controller LED lights. For example, if the speed controller is flashing full green, but the motor is not moving, it may instead be an electrical problem.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

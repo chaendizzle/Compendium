@@ -54,5 +54,4 @@ This command type has a build in PID Controller. However, it's actually easier a
 
 	morecommands/instant
 	morecommands/wait
-	morecommands/conditional
 	morecommands/print
