@@ -16,16 +16,16 @@ This command type runs once, then finishes. It's useful for commands that are ju
 
 Although our team commonly re-invents the wheel by creating our own SleepCommand, we could just use WaitCommand instead. This command waits a given number of seconds. This is mainly useful for autonomous timing, but can also be used to make sure a pneumatic cylinder has finished moving before moving other parts to prevent damage.
 
- - `ConditionalCommand <morecommands/conditional.html>`_
-
-This command type runs one command if the condition is true, and the other command if the condition is false. This is useful for commands that are designed to toggle something when pressed. For example, a simple toggle may consist of running the open command when the claw is closed, and then running the closed command when it is open.
-
  - `PrintCommand <morecommands/print.html>`_
 
 This command type simply prints out a message to the riolog. This is mainly used for debugging autonomous or other command groups, to check when certain commands start and finish by printing out messages before they start or after they finish by putting PrintCommands in the command group.
 
 Never used
 ----------
+
+ - `ConditionalCommand <morecommands/conditional.html>`_
+
+This command type runs one command if the condition is true, and the other command if the condition is false. This is useful for commands that are designed to toggle something when pressed. However, the main issue is that using a ConditionalCommand to implement a toggle is clunky. It would be better to either make a subsystem method for this, or just use a normal command with an if statement.
 
  - TimedCommand
 
@@ -41,7 +41,11 @@ This command type is only useful in a CommandGroup. Otherwise, it finishes immed
 
  - WaitUntilCommand
 
-This command waits until an absolute game time, such as 120 seconds on the match clock. There has never really been a reason to keep track of the match clock, so I have never used this command type.
+This command type waits until an absolute game time, such as 120 seconds on the match clock. There has never really been a reason to keep track of the match clock, so I have never used this command type.
+
+ - PIDCommand
+
+This command type has a build in PID Controller. However, it's actually easier and neater to just use the PID Controller in the subsystem anyway, so this command type isn't very useful.
 
 .. toctree::
 	:glob:
