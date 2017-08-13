@@ -138,7 +138,7 @@ If Elevator isn't resolved, make sure to import it.
 
 We always want the operator to have control over the elevator, so this command should never finish. Thus, leave isFinished() as it is.
 
-For safety purposes, when this command has to end(), it should stop the belt motor. interrupted() should do the same.
+And, for safety purposes, when this command has to end(), it should stop the belt motor. interrupted() should do the same.
 
 .. code-block:: java
 

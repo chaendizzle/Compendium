@@ -108,13 +108,14 @@ If Drive isn't resolved, make sure to import it.
 
 We always want the driver to have control over the robot, so this command should never finish. Thus, leave isFinished() as it is.
 
-For safety purposes, when this command has to end(), it should stop the robot. interrupted() should do the same.
+Firstly, the PID Controller has to be disabled, otherwise the robot will keep trying to go to the setpoint even after the command ends. Then, for safety purposes, when this command has to end(), it should stop the robot also. interrupted() should do the same.
 
 .. code-block:: java
 
     // Called once after isFinished returns true
     protected void end()
     {
+        Drive.DRIVE_DISTANCE_CONTROLLER.disable();
         Drive.LEFT_DRIVE_MOTORS.set(0);
         Drive.RIGHT_DRIVE_MOTORS.set(0);
     }
