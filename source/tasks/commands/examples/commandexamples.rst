@@ -13,9 +13,6 @@ Examples of Commands
  - `Open and Close a Claw <commands/claw.html>`_
  	Opening or closing a claw using pneumatics.
 
- - `Wait for an amount of time <commands/sleep.html>`_
- 	Command that just waits. Often useful for timing purposes in autonomous code, or as a safety net to be used in command groups.
-
  - `Moving an Elevator Manually <commands/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
@@ -35,7 +32,6 @@ Examples of Commands
 	commands/tankdrive
 	commands/bacq
 	commands/claw
-	commands/sleep
 	commands/elevatormanual
 	commands/elevatorsetpoint
 	commands/aimshooter

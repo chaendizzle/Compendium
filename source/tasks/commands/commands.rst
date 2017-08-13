@@ -109,9 +109,6 @@ Now, it's time to actually write the command. Since this varies greatly from com
  - `Open and Close a Claw <examples/commands/claw.html>`_
  	Opening or closing a claw using pneumatics.
 
- - `Wait for an amount of time <examples/commands/sleep.html>`_
- 	Command that just waits. Often useful for timing purposes in autonomous code, or as a safety net to be used in command groups.
-
  - `Moving an Elevator Manually <examples/commands/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
