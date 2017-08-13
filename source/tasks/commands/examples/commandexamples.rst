@@ -16,11 +16,11 @@ Examples of Commands
  - `Moving an Elevator Manually <commands/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
- - `Moving an Elevator to Setpoint <commands/elevatorsetpoint.html>`_
- 	Moving the elevator to certain setpoints using PIDs.
+ - `Driving Forward a Certain Distance <examples/commands/drivesetpoint.html>`_
+ 	Accurately driving the robot forwards to a certain distance using encoders and a PIDController.
 
- - `Aiming a Shooter both Manually and using Setpoints <commands/aimshooter.html>`_
- 	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way.
+ - `Aiming a Shooter both Manually and using Setpoints <examples/commands/aimshooter.html>`_
+ 	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way, using a Potentiometer and a PIDController.
 
 .. toctree::
 	:glob:
@@ -33,5 +33,5 @@ Examples of Commands
 	commands/bacq
 	commands/claw
 	commands/elevatormanual
-	commands/elevatorsetpoint
+	commands/drivesetpoint
 	commands/aimshooter

@@ -112,11 +112,11 @@ Now, it's time to actually write the command. Since this varies greatly from com
  - `Moving an Elevator Manually <examples/commands/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
- - `Moving an Elevator to Setpoint <examples/commands/elevatorsetpoint.html>`_
- 	Moving the elevator to certain setpoints using PIDs.
+ - `Driving Forward a Certain Distance <examples/commands/drivesetpoint.html>`_
+ 	Accurately driving the robot forwards to a certain distance using encoders and a PIDController.
 
  - `Aiming a Shooter both Manually and using Setpoints <examples/commands/aimshooter.html>`_
- 	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way.
+ 	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way, using a Potentiometer and a PIDController.
 
 List of example commands:
 
