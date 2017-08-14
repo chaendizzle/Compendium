@@ -63,7 +63,14 @@ Examples:
 	// or
 	Victor DRIVE_LEFT_FRONT = new Victor(3);
 
-	
+Note that if a speed controller or motor's wiring is flipped, it will run backwards. This means that when you set it to 1.0, the motor will actually run full power in reverse. It is recommended that electrical fixes this in the wiring of the robot, but sometimes this is not possible due to time constraints. If so, remember that you can always use:
+
+.. code-block:: java
+
+	speedController.setInverted(true);
+
+This flips the speed controller in code, fixing the problem.
+
 Make sure to be familiar with the status light meanings of each speed controller. It can really help in certain debugging situations.
 `Status light reference <https://wpilib.screenstepslive.com/s/4485/m/24166/l/144972-status-light-quick-reference>`_
 

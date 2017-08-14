@@ -25,7 +25,7 @@ The operator needs to be able to push the A, B, X, and Y buttons to make the cla
 
 However, the claw cannot go past 105° or -105° since then the claw is touching the floor, and going any further will burn out the motor.
 
-By default, however, the claw starts out by being manually controlled by the right thumbstick on the operator's controller. Then, the operator can press a button to rotate the claw to an angle setpoint. When it finishes rotating to an angle setpoint, it gives the operator manual control again. Additionally, if the claw is already rotating to a setpoint, the operator can cancel that setpoint and regain manual control by pressing down on the right stick, which is button 12.
+By default, however, the claw starts out by being manually controlled by the right thumbstick on the operator's controller. Then, the operator can press a button to rotate the claw to an angle setpoint. When it finishes rotating to an angle setpoint, it gives the operator manual control again. Additionally, if the claw is already rotating to a setpoint, the operator can cancel that setpoint and regain manual control by pressing down on the right stick, which is button 10.
 
 Additionally, gravity should not be able to make the claw slip and rotate downwards. This can be accomplished by telling a PID Controller to hold an angle setpoint, meaning that if gravity pulls the claw down, the PID Controller will move it back up.
 
@@ -54,7 +54,7 @@ If this is confusing, see `PIDControllers <./../../../../robotcode/components/pi
 
 On how to create this subsystem, see `Creating a subsystem <./../../../subsystems/subsystems.html>`_.
 
-In this example, there is an operator joystick in OI, and on the operator joystick, the right thumbstick is axis 3, and pressing down the joystick is button 12.
+In this example, there is an operator joystick in OI, and on the operator joystick, the right thumbstick is axis 3, and pressing down the joystick is button 10.
 
 On how to use OI, see `OI <./../../../../robotcode/structure/oi.html>`_.
 
@@ -150,7 +150,7 @@ The execute() method can be left empty since the PID Controller does all of the 
 
 For isFinished(), we want to end the command immediately if the angle setpoint isn't within the valid range of -105° to 105°. Additionally, if the PID is on target, we want to end the command also.
 
-But, remember that the operator can regain manual control by pressing the right thumbstick. So, when the button 12 is pressed down, then end the command also, reverting to the subsystem's default command of manual control.
+But, remember that the operator can regain manual control by pressing the right thumbstick. So, when the button 10 is pressed down, then end the command also, reverting to the subsystem's default command of manual control.
 
 .. code-block:: java
 
@@ -158,7 +158,7 @@ But, remember that the operator can regain manual control by pressing the right 
     @Override
     protected boolean isFinished()
     {
-        return (m_setpoint < -105.0 || m_setpoint > 105.0 || Claw.CLAW_ANGLE_CONTROLLER.onTarget() || OI.operator.getRawButton(12));
+        return (m_setpoint < -105.0 || m_setpoint > 105.0 || Claw.CLAW_ANGLE_CONTROLLER.onTarget() || OI.operator.getRawButton(10));
     }
 
 Lastly, for end() and interrupted(), we simply want to disable the PID Controller and stop the claw motor.
@@ -312,7 +312,7 @@ Firstly, make the ClawHoldManualControl command the default command of the Claw 
 Then, bind each of the operator buttons to the correct ClawRotateToAngle commands in OI's constructor.
 
 .. code-block:: java
-    :emphasize-lines: 9,10,12,13,15,16,18,19
+    :emphasize-lines: 9,10,10,13,15,16,18,19
 
     public static Joystick driver;
     public static Joystick operator;
@@ -387,7 +387,7 @@ ClawRotateToAngle
         @Override
         protected boolean isFinished()
         {
-            return (m_setpoint < -105.0 || m_setpoint > 105.0 || Claw.CLAW_ANGLE_CONTROLLER.onTarget() || OI.operator.getRawButton(12));
+            return (m_setpoint < -105.0 || m_setpoint > 105.0 || Claw.CLAW_ANGLE_CONTROLLER.onTarget() || OI.operator.getRawButton(10));
         }
     
         // Called once after isFinished returns true

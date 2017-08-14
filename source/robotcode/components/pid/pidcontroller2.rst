@@ -44,6 +44,8 @@ D stands for Derivative. We rarely use this, but it's used to tone down the outp
 Tuning
 ------
 
+**Note:** Before you start tuning, make sure that setting the motor to a positive value leads to an increasingly positive encoder value, and vice versa. If not, the PID Controller may not function correctly. Instead, what will happen is that the PID Controller tries to spin the motor towards the goal, but instead causes the motor to spin backwards. This will increase the error, and thus even further increase the motor output in the wrong direction, causing the motor to spin the wrong way at full power forever. This may be unsafe or could damage the robot. So, make sure that the motor and the encoder have the correct polarity before you start tuning and testing.
+
 The next step is to test the guess. Plug in the guessed values into the PID Controller.
 
 Now, observe how the robot reacts. There are 4 things to keep track of:
