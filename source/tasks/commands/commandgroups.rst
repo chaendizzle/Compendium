@@ -98,11 +98,8 @@ Here are some examples of command groups:
  - `Deflector Flip <examples/commandgroups/deflector.html>`_
  	Pushes a piece of plastic down, and then back up, to dislodge any gears stuck on top of it. 
 
- - `Acquire gear from a wall <examples/commandgroups/wallacquire.html>`_
- 	Goes through the sequence of events that prepares the robot to acquire a gear from the wall.
-
- - `Shooting sequence <examples/commandgroups/shootingsequence.html>`_
- 	Prepares the shot and then shoots.
+ - `Acquire gear from the front <examples/commandgroups/frontacquire.html>`_
+ 	Goes through the sequence of events that prepares the robot to acquire a gear from the front of the robot.
 
 List of example command groups:
 
