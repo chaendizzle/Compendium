@@ -71,7 +71,7 @@ and initialize them in the constructor:
         RIGHT_TOP_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
     }
 
-Next, group the motors. This can be done by either `writing your own custom PIDOutput <./../../../robotcode/components/pid/pidoutput.html>` that serves as a PIDOutputGroup, or using `a pre-existing PIDOutputGroup class <http://nacsvn.aasd.k12.wi.us/repos/nac-software-2017/robot/trunk/Team93Robot2017/src/org/usfirst/frc/team93/robot/utilities/PIDOutputGroup.java>` (why reinvent the wheel?).
+Next, group the motors. This can be done by either `writing your own custom PIDOutput <./../../../robotcode/components/pid/pidoutput.html>`_ that serves as a PIDOutputGroup, or using `a pre-existing PIDOutputGroup class <http://nacsvn.aasd.k12.wi.us/repos/nac-software-2017/robot/trunk/Team93Robot2017/src/org/usfirst/frc/team93/robot/utilities/PIDOutputGroup.java>`_ (why reinvent the wheel?).
 
 Add the PIDOutputGroups to the class:
 
@@ -138,7 +138,7 @@ Encoders
 
 Now that all the motors are in the subsystem, add the sensors. Starting with the encoders, add them to the class and the constructor.
 
-Also add a PIDSourceGroup that groups together the two encoders. You can either `create this custom PIDSourceGroup yourself <./../../../robotcode/components/pid/pidsource.html>` or `use one that already exists <http://nacsvn.aasd.k12.wi.us/repos/nac-software-2017/robot/trunk/Team93Robot2017/src/org/usfirst/frc/team93/robot/utilities/MedianPIDSource.java>` (again, why reinvent the wheel?).
+Also add a PIDSourceGroup that groups together the two encoders. You can either `create this custom PIDSourceGroup yourself <./../../../robotcode/components/pid/pidsource.html>`_ or `use one that already exists <http://nacsvn.aasd.k12.wi.us/repos/nac-software-2017/robot/trunk/Team93Robot2017/src/org/usfirst/frc/team93/robot/utilities/MedianPIDSource.java>`_ (again, why reinvent the wheel?).
 
 Class:
 
@@ -235,7 +235,7 @@ Lastly, add the PID Controllers. As usual, declare them in the class.
 	public static PIDController DRIVE_DISTANCE_CONTROLLER;
 	public static PIDController DRIVE_ANGLE_CONTROLLER;
 
-Now, the DRIVE_ANGLE_CONTROLLER needs a PIDOutput that turns the wheels opposite to each other, since no PIDOutput in this subsystem does this. To do this, `write your own custom PIDOutput <./../../../robotcode/components/pid/pidoutput.html>` that outputs opposite values to the left and right motors, to make the robot turn. Call it TurnPIDOutput.
+Now, the DRIVE_ANGLE_CONTROLLER needs a PIDOutput that turns the wheels opposite to each other, since no PIDOutput in this subsystem does this. To do this, `write your own custom PIDOutput <./../../../robotcode/components/pid/pidoutput.html>`_ that outputs opposite values to the left and right motors, to make the robot turn. Call it TurnPIDOutput.
 
 Here's a TurnPIDOutput example:
 
