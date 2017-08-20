@@ -14,4 +14,3 @@ Examples of Command Groups
 
 	commandgroups/deflector
 	commandgroups/frontacquire
-	commandgroups/shootingsequence
