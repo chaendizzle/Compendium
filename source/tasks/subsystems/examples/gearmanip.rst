@@ -1,9 +1,11 @@
 Gear manipulator subsystem
 ==========================
 
-In this example, we will create a very basic subsystem that only consists of one speed controller that turns a motor.
+In this example, we create a subsystem designed to control the Gear Manipulator subsystem from 2017.
 
-The only component will be that VictorSP called CLIMBER_MOTOR, and the only public method will be setClimberMotor, which is obviously used to set the power of CLIMBER_MOTOR.
+In this subsystem, a belt motor moves a carriage between two endpoints, the front and the back of the robot. At each end, there is a reed switch that tells when the carriage has reached that end. There is also an encoder that tracks the position of the belt.
+
+Attached to the carriage, there is also a claw that is made up of two grabbers that open and close, controlled by double solenoids. One grabber is in the front, and one grabber is in the back. They open and close to allow gears in.
 
 Start out by `creating the subsystem file <./../subsystems.html#create-the-subsystem-s-file>`_. You'll start out with this code:
 
@@ -12,12 +14,12 @@ Start out by `creating the subsystem file <./../subsystems.html#create-the-subsy
     /**
      *
      */
-    public class Climber extends Subsystem {
+    public class GearManipulator extends Subsystem {
 
         // Put methods for controlling this subsystem
         // here. Call these from Commands.
 
-        public Climber()
+        public GearManipulator()
         {
 
         }

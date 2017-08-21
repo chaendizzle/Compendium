@@ -62,11 +62,11 @@ This explanation of subsystems is poor since each subsystem can be very differen
  - `Climber <examples/climber.html>`_
  	A simple subsystem that only contains one motor that turns.
 
+ - `Gear Manipulator <examples/gearmanip.html>`_
+ 	The gear manipulator subsystem from 2017.
+
  - `Drive <examples/tankdrive.html>`_
  	A fairly standard tank drive subsystem.
-
- - `Gear Manipulator <examples/gearmanip.html>`_
- 	The gear manipulator subsystemfrom 2017.
 
 List of example subsystems:
 
