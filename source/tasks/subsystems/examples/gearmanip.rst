@@ -53,6 +53,7 @@ and initialize it in the constructor:
 Then, add the method setBeltMotor, so that commands can aset the motor power. It is generally good practice to expose only public setters, and make the field itself private.
 
 .. code-block:: java
+    :emphasize-lines: 3
 
 	public static void setBeltMotor(double value)
 	{
@@ -111,7 +112,7 @@ Also, create the setters for these claws.
 Reed Switches
 ^^^^^^^^^^^^^
 
-Next up is to add the reed switch sensors to the subsystem. Since reed switches are just digital inputs, we treat them as such.
+Next up is to add the reed switch sensors to the subsystem. Since reed switches are just digital inputs, we treat them as such. Declare the DigitalInputs in the class:
 
 .. code-block:: java
 
@@ -138,12 +139,12 @@ Now, add the getters that tell commands about the state of the reed switches. Re
 
 .. code-block:: java
 
-    public static boolean getFrontReedSwitch()
+    public static boolean getFrontReedSwitchActive()
     {
         return !(FRONT_REED_SWITCH.get());
     }
 
-    public static boolean getBackReedSwitch()
+    public static boolean getBackReedSwitchActive()
     {
         return !(BACK_REED_SWITCH.get());
     }
@@ -151,7 +152,7 @@ Now, add the getters that tell commands about the state of the reed switches. Re
 Encoder
 ^^^^^^^
 
-Now, add the encoder to the subsystem.
+Now, add the encoder to the subsystem. Declare it in the class:
 
 .. code-block:: java
 
@@ -282,12 +283,12 @@ Final code
             BACK_CLAW.set(DoubleSolenoid.Value.kForward);
         }
 
-        public static boolean getFrontReedSwitch()
+        public static boolean getFrontReedSwitchActive()
         {
             return !(FRONT_REED_SWITCH.get());
         }
 
-        public static boolean getBackReedSwitch()
+        public static boolean getBackReedSwitchActive()
         {
             return !(BACK_REED_SWITCH.get());
         }

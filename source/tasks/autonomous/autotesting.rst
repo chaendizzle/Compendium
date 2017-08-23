@@ -43,7 +43,7 @@ Then, in the Robot file's robotInit(), add:
 
 Now, you can observe the encoder values in SmartDashboard.
 
-Now, turn on the robot and watch the robot as other people push it straight forward at a steady rate. Make sure all of the encoders increase at the same time, and at the end, are about the same value. If an encoder stays at 0, either it's not correctly connected, the pins are wrong, or it has no power. If an encoder increases slowly, or fails to increase at some times, it's possible that the encoder shaft is slipping, or the disk is damaged, or a multitude of reasons. A scope can help diagnose issues with encoders not working, but that's more of an electrical task than a software one.
+Now, turn on the robot and watch the robot as other people push it straight forward at a steady rate. Make sure all of the encoders increase at the same time, and at the end, are about the same value. If an encoder stays at 0, then either it's not correctly connected, the pins are wrong, or it has no power. If an encoder increases slowly, or fails to increase at some times, it's possible that the encoder shaft is slipping, or the disk is damaged, or a multitude of reasons. A scope can help diagnose issues with encoders not working, but that's more of an electrical task than a software one.
 
 If any encoders' signal wires are flipped, their number will be negative when the robot goes forwards. Either flip the signal wires coming from the encoder, or flip the pins in RobotMap.
 
@@ -67,7 +67,7 @@ Testing the autonomous commands
 
 Firstly, use tape to mark all of the important field markers. Remember that not only is each field different, but also that drivers are not allowed to use measuring tools when placing the robot. Because of this, the drivers should practice placing the robot in the same spot each time relative to the tapes that you put on the carpet. Communicate this information to drive coach as well.
 
-Then, put the robot on the practice field, and run the autonomous command to make sure it does what it's supposed to do. If the robot is consistently missing a target by the same amount each time, then it's OK to manually adjust the distances you're passing into the autonomous commands a little bit. For example, if the robot is consistently driving too far each time, it may be OK to manually decrease the distance. However, in most cases, this is caused by a poorly tuned PID or incorrect calculations, so make sure these aren't the issue first.
+Then, put the robot on the practice field, and run the autonomous command to make sure it does what it's supposed to do. If the robot is consistently missing a target by the same amount each time, then it's OK to manually adjust the distances you're passing into the autonomous commands. For example, if the robot is consistently driving too far each time, it may be OK to subtract off a few ticks in code to decrease the distance. However, in most cases, this is caused by a poorly tuned PID or incorrect calculations, so make sure these aren't the issue first.
 
 Autonomous testing takes a long time, since you will have to repeatedly run the robot, adjust numbers, deploy and move it back. Because of this, make sure that you either have access to a twin robot (this usually happens), or that you have time at the end of build season to test autonomous (this never happens).
 
