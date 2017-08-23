@@ -8,7 +8,7 @@ Design
 
 In this example, the Gear Manipulator is composed of a claw attached to a carriage. That carriage (and the claw) then moves along a track, pulled by a belt with a motor. This track goes to the front and back of the robot. There is an encoder that can track the position of the carriage along the track.
 
-The claw is actually composed of two pieces, the front claw, and the back claw, each of which can open and close separately. When the front claw is open, gears can come in from the front, and the same goes for the back. On the top and bottom of the claw, there are also intake wheels that spi and suck in gears from either side of the claw.
+The claw is actually composed of two pieces, the front claw, and the back claw, each of which can open and close separately. When the front claw is open, gears can come in from the front, and the same goes for the back. On the top and bottom of the claw, there are also intake wheels that spin and suck in gears from either side of the claw.
 
 Thus, to grab a gear from the front of the robot, you move the carriage to the front, open the front claw but keep the back claw closed (otherwise the gear would go all the way through) and then start the front intake motors, sucking in the gear.
 
