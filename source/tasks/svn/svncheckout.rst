@@ -5,16 +5,12 @@ An **SVN Checkout** is the way to obtain a copy of the code from the repository.
 
 Knowing how to make an SVN Checkout is necessary, since you must already have a copy of the code before making a modification to it.
 
-1. Make a new folder
---------------------
-
 The first step is to make a new folder, since you can only checkout to empty folders. Do not make the checkout the same as your workspace, or eclipse-generated files will show up in it.
 
 .. image:: ./_static/checkout1.png
    :width: 50%
 
-2. Open the SVN Checkout window
--------------------------------
+Clicking the SVN Checkout entry opens the SVN Checkout window.
 
 .. image:: ./_static/checkout2.png
    :width: 70%
