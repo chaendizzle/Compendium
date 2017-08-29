@@ -17,7 +17,7 @@ Take special note of the drive commands. Autonomous mode requires that the robot
 
 This section assumes that you know how to use addSequential and addParallel. For more information on this, see `Command Groups <./../commands/commandgroups.html#make-a-plan>`_.
 
-First, talk to Strategy and ask what they want as an autonomous plan. They should be able to give you an idea of the tasks that need to be done in the autonomous mode. For an example of an autonomous plan, see `Example Autonomous <autoexample.html>`_.
+First, talk to Strategy and ask what they want as an autonomous plan. They should be able to give you an idea of the tasks that need to be done in the autonomous mode. For an example of an autonomous plan, see `Example Autonomous <autochooser.html>`_.
 
 Then, examine the field. Calculate dimensions and distances, and figure out how you will command the robot to move from one position to another by using the commands you have. Note that you may need different autonomous plans for each of the 3 starting positions. The field may even be asymmetric, which means you'll even more plans to account for those differences. 
 
@@ -65,7 +65,7 @@ than
 
 By putting your commands in terms of field measurements, not only is it easier to adjust to differing field sizes, it's also more readable, since the parameter being passed into the commands are directly related to the math done in the plan that gets the robot to the correct position.
 
-Again, an example is very useful here. If this doesn't make sense, try `Example Autonomous <autoexample.html>`_.
+Again, an example is very useful here. If this doesn't make sense, try `Example Autonomous <autochooser.html>`_.
 
 In almost all cases, you're going to need more than one autonomous plan, so try to build in an enum and switch statement into your command group to handle that.
 
@@ -160,6 +160,5 @@ For more on how to test autonomous plans once the robot is ready to test, see `T
 	:caption: Further Reading
 	:titlesonly:
 
-	autoexample
 	autochooser
 	autotesting
