@@ -14,6 +14,8 @@ Make sure the RoboRIO works
  - Note that different versions of the NIUpdateSuite may be incompatible, so make sure that the version on the computer is the same version as imaged onto the RoboRIO.
  - If all else fails, re-image and try again.
 
+For more information on deploying and running, see `Building and downloading a robot project to the roboRIO <https://wpilib.screenstepslive.com/s/4485/m/13809/l/242586-building-and-downloading-a-robot-project-to-the-roborio>`_.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

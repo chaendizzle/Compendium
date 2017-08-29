@@ -51,6 +51,8 @@ Often, the issue is faulty wiring (e.g. bad crimp). Once all electrical issues a
 	
 When debugging code related to solenoids, it's helpful to examine the LEDs on the solenoids. If the LEDs are changing correctly but no pneumatic cylinders are actuating, then the problem may be an issue with the pneumatics.
 
+For more information, see `WPILib's documentation on pneumatics <https://wpilib.screenstepslive.com/s/4485/m/13809/l/599708-operating-pneumatic-cylinders-solenoids>`_.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

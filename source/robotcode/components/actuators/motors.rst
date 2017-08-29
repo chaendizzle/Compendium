@@ -80,6 +80,10 @@ For Talon SRX’s, make sure to update the firmware before inspection at competi
 
 When debugging code related to speed controllers, it is helpful to look at the speed controller LED lights. For example, if the speed controller is flashing full green, but the motor is not moving, it may instead be an electrical problem.
 
+For more information on speed controllers, see `WPILib's documentation on speed controllers <https://wpilib.screenstepslive.com/s/4485/m/13809/l/599702-driving-motors-with-speed-controller-objects-victors-talons-and-jaguars>`_.
+
+For more information on CAN, see `WPILib's documentation on using CAN devices <https://wpilib.screenstepslive.com/s/4485/m/13809/c/88896>`_.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

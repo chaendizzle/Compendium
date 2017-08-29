@@ -18,3 +18,4 @@ These are some tasks that software members commonly must do, so it is good to kn
 	subsystems/subsystems
 	autonomous/autonomous
 	svn/svn
+	dashboard
