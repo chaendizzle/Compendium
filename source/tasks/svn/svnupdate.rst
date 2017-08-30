@@ -10,10 +10,10 @@ Additionally, if a checkout is not up to date, the repository may stop you from 
 Updating is simple. Simply right click to open the context menu after selecting the checkout, and click SVN Update.
 
 .. image:: ./_static/update1.png
-   :width: 100%
+    :width: 100%
 
 .. image:: ./_static/update2.png
-   :width: 100%
+    :width: 100%
 
 .. toctree::
 	:glob:

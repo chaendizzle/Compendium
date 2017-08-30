@@ -59,7 +59,7 @@ Examples:
 
 .. code-block:: java
 
-	Talon DRIVE_LEFT_FRONT = new Talon(3);
+	CANTalon DRIVE_LEFT_FRONT = new CANTalon(3);
 	// or
 	Victor DRIVE_LEFT_FRONT = new Victor(3);
 
