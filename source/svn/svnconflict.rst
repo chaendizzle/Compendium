@@ -11,6 +11,7 @@ File Conflicts
 A file conflict occurs when two people edit the same line of a file. If one person then commits their change, then when the other person tries to SVN Update, the conflict will appear.
 
 Example:
+^^^^^^^^
 
 Let's say there is this line of code:
 
@@ -76,6 +77,7 @@ Tree Conflicts
 A **tree conflict** occurs when a conflict involves the file tree. For example, if Person A edits a file, but Person B deletes or renames it, then that is a tree conflict, since the file that Person A edited is missing from the file tree.
 
 Example:
+^^^^^^^^
 
 Let's say Person A trying to keep track of the dimensions of the game field by storing the game field data in a text file.
 

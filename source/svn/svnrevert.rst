@@ -25,6 +25,8 @@ Then, click OK and the revert should complete. Those files should now only conta
 .. image:: ./_static/revert4.png
     :width: 100%
 
+An important thing to note is that if a checkout is not working correctly and there are no important edits to preserve, one good step to take is to `SVN Cleanup <svncleanup.html>`_ and then SVN Revert. This usually resolves issues with the checkout, since it essentially turns it back into a clean checkout.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10
