@@ -26,11 +26,11 @@ There are several types of speed controllers.
 	.. image:: ./_static/217-8080.jpg
 		:width: 30%
 	
-	Uses a CAN channel, configured in the RoboRIO web dashboard.
+	This uses the CANTalon class in code, and uses a CAN channel, configured in the RoboRIO web dashboard.
 	Talons can be given brake mode or coast mode.
 	They can also be configured to respond to a limit switch directly, but this is rarely used.
 
- - Victor
+ - Victor or VictorSP
 	
 	.. image:: ./_static/217-9090.jpg
 		:width: 30%

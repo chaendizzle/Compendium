@@ -14,4 +14,5 @@ SVN is the version control software that we use. It allows multiple people to wo
 	svncommit
 	svnlog
 	svnrevert
+	svncleanup
 	svnconflict
