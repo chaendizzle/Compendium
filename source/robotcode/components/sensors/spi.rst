@@ -1,7 +1,7 @@
 SPI
 ===
 
-If you use these, I’m sorry. Please try not to.
+If you use these, I’m sorry. Please try not to use SPI for anything but the FRC Gyro.
 
 You’ll just have to look at the documentation a lot, then figure out how someone else did it in another language to understand what’s going on, then try to shoehorn that into FIRST’s SPI implementation, somehow scrounge out the data you need, then debug it for several weeks.
 

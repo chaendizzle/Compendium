@@ -10,6 +10,7 @@ These are some tasks that software members commonly must do, so it is good to kn
 	:titlesonly:
 
 	pins
+	drivecontrols
 	drivercontrols
 	integration
 	commands/commands

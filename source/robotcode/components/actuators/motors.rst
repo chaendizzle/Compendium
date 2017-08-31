@@ -53,15 +53,19 @@ There are several types of speed controllers.
 	They’re old, huge, and no one really uses them anymore.
 	We used to use them a long time ago though, so if you find one, you’ll know what it is.
 
-It is simple to create a speed controller in code.
+It is simple to create a speed controller in code. WPILib has a custom class for each motor controller that handles voltage, pwm, and other power stuff internally, so all you have to do is give the motor a value from -1 to 1.
+
+The constructor for motor controllers takes the pwm pin as an argument.
 
 Examples:
 
 .. code-block:: java
 
 	Talon DRIVE_LEFT_FRONT = new Talon(3);
-	// or
-	Victor DRIVE_LEFT_FRONT = new Victor(3);
+
+	Victor DRIVE_RIGHT_FRONT = new Victor(3);
+
+	Spark CLIMBER_MOTOR = new Spark(4);
 
 	
 Make sure to be familiar with the status light meanings of each speed controller. It can really help in certain debugging situations.
