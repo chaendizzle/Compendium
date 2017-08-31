@@ -1,6 +1,7 @@
 Autonomous Code
 ===============
 
+Every FRC match begins with a 15-second autonomous period. During this time, drivers are not allowed to touch the controls, and the robot runs off of preprogrammed instructions.
 
 For most cases, autonomous code is simply just writing and running a `CommandGroup <./../commands/commandgroups.html>`_ that is specifically designed to accomplish certain autonomous tasks.
 
