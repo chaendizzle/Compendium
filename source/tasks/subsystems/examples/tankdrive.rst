@@ -3,7 +3,7 @@ Tank Drive subsystem
 
 In this example, we will create a fairly standard tank drive subystem, present in almost any robot that has tank drive.
 
-This example will use a 6 motor drive train, with 3 motors on each side, controlled by Talon SRX's. The subsystem will also have a group that set the right motors and a group that sets the left motors, as well as a group that sets all of the motors.
+This example will use a 6 motor drive train, with 3 motors on each side, controlled by Talon SRX's (CANTalon's). The subsystem will also have a group that set the right motors and a group that sets the left motors, as well as a group that sets all of the motors.
 
 Additionally, there are 2 encoders, one for each side. These will also be made into a group that averages the two.
 
@@ -37,21 +37,21 @@ Start out by `creating the subsystem file <./../subsystems.html#create-the-subsy
 Motors/Speed Controllers
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now, create the Talon SRX's that represent the motors.
+Now, create the Talon SRX's (CANTalon's) that represent the motors.
 
 Declare them in the class:
 
 .. code-block:: java
 	
 	// Left Motors
-	private static Talon LEFT_FRONT_DRIVE_MOTOR;
-	private static Talon LEFT_BACK_DRIVE_MOTOR;
-	private static Talon LEFT_TOP_DRIVE_MOTOR;
+	private static CANTalon LEFT_FRONT_DRIVE_MOTOR;
+	private static CANTalon LEFT_BACK_DRIVE_MOTOR;
+	private static CANTalon LEFT_TOP_DRIVE_MOTOR;
 
 	// Right Motors
-	private static Talon RIGHT_FRONT_DRIVE_MOTOR;
-	private static Talon RIGHT_BACK_DRIVE_MOTOR;
-	private static Talon RIGHT_TOP_DRIVE_MOTOR;
+	private static CANTalon RIGHT_FRONT_DRIVE_MOTOR;
+	private static CANTalon RIGHT_BACK_DRIVE_MOTOR;
+	private static CANTalon RIGHT_TOP_DRIVE_MOTOR;
 
 and initialize them in the constructor:
 
@@ -61,14 +61,14 @@ and initialize them in the constructor:
     public Drive()
     {
         // Left Motors
-        LEFT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
-        LEFT_BACK_DRIVE_MOTOR = new Talon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
-        LEFT_TOP_DRIVE_MOTOR = new Talon(RobotMap.LEFT_TOP_DRIVE_MOTOR_MOTOR_PIN);
+        LEFT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
+        LEFT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
+        LEFT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_TOP_DRIVE_MOTOR_PIN);
 
         // Right Motors
-        RIGHT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
-        RIGHT_BACK_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
-        RIGHT_TOP_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
+        RIGHT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
+        RIGHT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
+        RIGHT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
     }
 
 Next, group the motors. This can be done by either `writing your own custom PIDOutput <./../../../robotcode/components/pid/pidoutput.html>`_ that serves as a PIDOutputGroup, or using `a pre-existing PIDOutputGroup class <http://nacsvn.aasd.k12.wi.us/repos/nac-software-2017/robot/trunk/Team93Robot2017/src/org/usfirst/frc/team93/robot/utilities/PIDOutputGroup.java>`_ (why reinvent the wheel?).
@@ -90,14 +90,14 @@ Then initialize those PIDOutputGroups in the constructor:
     public Drive()
     {
         // Left Motors
-        LEFT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
-        LEFT_BACK_DRIVE_MOTOR = new Talon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
-        LEFT_TOP_DRIVE_MOTOR = new Talon(RobotMap.LEFT_TOP_DRIVE_MOTOR_MOTOR_PIN);
+        LEFT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
+        LEFT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
+        LEFT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_TOP_DRIVE_MOTOR_PIN);
 
         // Right Motors
-        RIGHT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
-        RIGHT_BACK_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
-        RIGHT_TOP_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
+        RIGHT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
+        RIGHT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
+        RIGHT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
 
         // PID Output Groups
         LEFT_DRIVE_MOTORS = new PIDOutputGroup(LEFT_FRONT_DRIVE_MOTOR, LEFT_BACK_DRIVE_MOTOR, LEFT_TOP_DRIVE_MOTOR);
@@ -147,7 +147,7 @@ Class:
 	// Encoders
 	public static Encoder LEFT_DRIVE_ENCODER;
 	public static Encoder RIGHT_DRIVE_ENCODER;
-	public static MedianPIDSourceGroup DRIVE_ENCODERS;
+	public static MedianPIDSource DRIVE_ENCODERS;
 
 Constructor:
 
@@ -157,14 +157,14 @@ Constructor:
     public Drive()
     {
         // left motors
-        LEFT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
-        LEFT_BACK_DRIVE_MOTOR = new Talon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
-        LEFT_TOP_DRIVE_MOTOR = new Talon(RobotMap.LEFT_TOP_DRIVE_MOTOR_MOTOR_PIN);
+        LEFT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
+        LEFT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
+        LEFT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_TOP_DRIVE_MOTOR_PIN);
 
         // right motors
-        RIGHT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
-        RIGHT_BACK_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
-        RIGHT_TOP_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
+        RIGHT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
+        RIGHT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
+        RIGHT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
 
         // pid output groups
         LEFT_DRIVE_MOTORS = new PIDOutputGroup(LEFT_FRONT_DRIVE_MOTOR, LEFT_BACK_DRIVE_MOTOR, LEFT_TOP_DRIVE_MOTOR);
@@ -181,29 +181,38 @@ Add methods that access the encoders also, for the sake of good practice.
 
 .. code-block:: java
 
-	/**
-	 * Gets the value of the left drive encoders.
-	 */
-	public static double getLeftEncoder()
-	{
-	    LEFT_DRIVE_ENCODER.get(value);
-	}
+    /**
+     * Gets the value of the left drive encoders.
+     */
+    public static double getLeftEncoder()
+    {
+        return LEFT_DRIVE_ENCODER.get();
+    }
 
-	/**
-	 * Gets the value of the right drive encoders.
-	 */
-	public static double getRightEncoder()
-	{
-	    RIGHT_DRIVE_ENCODER.get(value);
-	}
+    /**
+     * Gets the value of the right drive encoders.
+     */
+    public static double getRightEncoder()
+    {
+        return RIGHT_DRIVE_ENCODER.get();
+    }
 
-	/**
-	 * Gets the value of the drive encoders, averaged.
-	 */
-	public static double getDriveEncoders()
-	{
-	    DRIVE_ENCODERS.get(value);
-	}
+    /**
+     * Gets the value of the drive encoders, averaged.
+     */
+    public static double getDriveEncoders()
+    {
+        return DRIVE_ENCODERS.get();
+    }
+
+    /**
+     * Resets the drive encoders.
+     */
+    public static void resetEncoders()
+    {
+        LEFT_DRIVE_ENCODER.reset();
+        RIGHT_DRIVE_ENCODER.reset();
+    }
 
 Gyro
 ^^^^
@@ -269,14 +278,14 @@ Now, add to the constructor:
     public Drive()
     {
         // Left Motors
-        LEFT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
-        LEFT_BACK_DRIVE_MOTOR = new Talon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
-        LEFT_TOP_DRIVE_MOTOR = new Talon(RobotMap.LEFT_TOP_DRIVE_MOTOR_MOTOR_PIN);
+        LEFT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
+        LEFT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
+        LEFT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_TOP_DRIVE_MOTOR_PIN);
 
         // Right Motors
-        RIGHT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
-        RIGHT_BACK_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
-        RIGHT_TOP_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
+        RIGHT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
+        RIGHT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
+        RIGHT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
 
         // PID Output Groups
         LEFT_DRIVE_MOTORS = new PIDOutputGroup(LEFT_FRONT_DRIVE_MOTOR, LEFT_BACK_DRIVE_MOTOR, LEFT_TOP_DRIVE_MOTOR);
@@ -309,27 +318,27 @@ Final code
     /**
      * Drive subsystem
      */
-    public class Climber extends Subsystem
+    public class Drive extends Subsystem
     {
         // Left Motors
-        private static Talon LEFT_FRONT_DRIVE_MOTOR;
-        private static Talon LEFT_BACK_DRIVE_MOTOR;
-        private static Talon LEFT_TOP_DRIVE_MOTOR;
+        private static CANTalon LEFT_FRONT_DRIVE_MOTOR;
+        private static CANTalon LEFT_BACK_DRIVE_MOTOR;
+        private static CANTalon LEFT_TOP_DRIVE_MOTOR;
 
         // Right Motors
-        private static Talon RIGHT_FRONT_DRIVE_MOTOR;
-        private static Talon RIGHT_BACK_DRIVE_MOTOR;
-        private static Talon RIGHT_TOP_DRIVE_MOTOR;
+        private static CANTalon RIGHT_FRONT_DRIVE_MOTOR;
+        private static CANTalon RIGHT_BACK_DRIVE_MOTOR;
+        private static CANTalon RIGHT_TOP_DRIVE_MOTOR;
 
         // PID Output Groups
-        public static Encoder LEFT_DRIVE_ENCODER;
-        public static Encoder RIGHT_DRIVE_ENCODER;
-        public static MedianPIDSourceGroup DRIVE_ENCODERS;
+        public static PIDOutputGroup LEFT_DRIVE_MOTORS;
+        public static PIDOutputGroup RIGHT_DRIVE_MOTORS;
+        public static PIDOutputGroup ALL_DRIVE_MOTORS;
 
         // Encoders
         public static Encoder LEFT_DRIVE_ENCODER;
         public static Encoder RIGHT_DRIVE_ENCODER;
-        public static MedianPIDSourceGroup DRIVE_ENCODERS;
+        public static MedianPIDSource DRIVE_ENCODERS;
 
         // Gyro
         public static AHRS DRIVE_GYRO;
@@ -341,14 +350,14 @@ Final code
         public Drive()
         {
             // Left Motors
-            LEFT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
-            LEFT_BACK_DRIVE_MOTOR = new Talon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
-            LEFT_TOP_DRIVE_MOTOR = new Talon(RobotMap.LEFT_TOP_DRIVE_MOTOR_MOTOR_PIN);
+            LEFT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
+            LEFT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
+            LEFT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_TOP_DRIVE_MOTOR_PIN);
 
             // Right Motors
-            RIGHT_FRONT_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
-            RIGHT_BACK_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
-            RIGHT_TOP_DRIVE_MOTOR = new Talon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
+            RIGHT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
+            RIGHT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_BACK_DRIVE_MOTOR_PIN);
+            RIGHT_TOP_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_TOP_DRIVE_MOTOR_PIN);
 
             // PID Output Groups
             LEFT_DRIVE_MOTORS = new PIDOutputGroup(LEFT_FRONT_DRIVE_MOTOR, LEFT_BACK_DRIVE_MOTOR, LEFT_TOP_DRIVE_MOTOR);
@@ -403,7 +412,7 @@ Final code
          */
         public static double getLeftEncoder()
         {
-            LEFT_DRIVE_ENCODER.get(value);
+            return LEFT_DRIVE_ENCODER.get();
         }
 
         /**
@@ -411,7 +420,7 @@ Final code
          */
         public static double getRightEncoder()
         {
-            RIGHT_DRIVE_ENCODER.get(value);
+            return RIGHT_DRIVE_ENCODER.get();
         }
 
         /**
@@ -419,7 +428,16 @@ Final code
          */
         public static double getDriveEncoders()
         {
-            DRIVE_ENCODERS.get(value);
+            return DRIVE_ENCODERS.get();
+        }
+
+        /**
+         * Resets the drive encoders.
+         */
+        public static void resetEncoders()
+        {
+            LEFT_DRIVE_ENCODER.reset();
+            RIGHT_DRIVE_ENCODER.reset();
         }
     }
 

@@ -238,6 +238,8 @@ Final code
 
         private static Encoder BELT_ENCODER;
 
+        public static PIDController BELT_POSITION_CONTROLLER;
+
         public GearManipulator()
         {
             BELT_MOTOR = new Victor(RobotMap.BELT_MOTOR_PIN);
