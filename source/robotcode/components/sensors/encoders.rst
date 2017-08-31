@@ -28,6 +28,8 @@ However, the encoder is most commonly used as a PIDSource, without calling get()
 
 Note that it is still possible to read from DigitalInputs even while the robot is disabled. Thus, encoders can measure rotations even when the robot is disabled.
 
+If the two encoder pins are flipped in RobotMap or in wiring from how they should be, then the encoder will tick backwards, meaning that when the encoder spins forwards, it will given an increasingly negative reading. You can change this either by switching the wiring, or switching the pins in RobotMap.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

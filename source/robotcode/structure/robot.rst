@@ -26,6 +26,14 @@ This file contains the basics for running the robot. Everything must somehow be 
  - testPeriodic():
 	I don’t think I’ve ever used test mode. This is usually left untouched.
 
+**Note:** In both autonomousPeriodic() and teleopPeriodic(), there is this line:
+
+.. code-block:: java
+
+    Scheduler.getInstance().run();
+
+Do not remove or comment out that line, or else commands will not work.
+
 .. toctree::
 	:glob:
 	:maxdepth: 10

@@ -8,7 +8,8 @@ These are some tasks that software members commonly must do, so it is good to kn
 	:maxdepth: 10
 	:caption: Contents
 	:titlesonly:
-
+	
+	newproject
 	pins
 	drivecontrols
 	drivercontrols
@@ -17,4 +18,4 @@ These are some tasks that software members commonly must do, so it is good to kn
 	commands/commandgroups
 	subsystems/subsystems
 	autonomous/autonomous
-	svn/svn
+	dashboard

@@ -13,17 +13,14 @@ Examples of Commands
  - `Open and Close a Claw <commands/claw.html>`_
  	Opening or closing a claw using pneumatics.
 
- - `Wait for an amount of time <commands/sleep.html>`_
- 	Command that just waits. Often useful for timing purposes in autonomous code, or as a safety net to be used in command groups.
-
  - `Moving an Elevator Manually <commands/elevatormanual.html>`_
  	Raising and lowering an elevator subsystem, in between two limit switches marking the bottom and the top.
 
- - `Moving an Elevator to Setpoint <commands/elevatorsetpoint.html>`_
- 	Moving the elevator to certain setpoints using PIDs.
+ - `Driving Forward a Certain Distance <commands/drivesetpoint.html>`_
+ 	Accurately driving the robot forwards to a certain distance using encoders and a PIDController.
 
- - `Aiming a Shooter both Manually and using Setpoints <commands/aimshooter.html>`_
- 	Two commands that interact to give an operator both manual and setpoint control of a rotating shooter that can only rotate between two limits in a safe way.
+ - `Rotating a Claw both Manually and using Setpoints <commands/aimclaw.html>`_
+ 	Two commands that interact to give an operator both manual and setpoint control of a rotating claw that can only rotate between two limits in a safe way, using a Potentiometer and a PIDController.
 
 .. toctree::
 	:glob:
@@ -35,7 +32,6 @@ Examples of Commands
 	commands/tankdrive
 	commands/bacq
 	commands/claw
-	commands/sleep
 	commands/elevatormanual
-	commands/elevatorsetpoint
-	commands/aimshooter
+	commands/drivesetpoint
+	commands/aimclaw

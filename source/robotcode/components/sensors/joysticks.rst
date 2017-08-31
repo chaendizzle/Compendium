@@ -11,13 +11,33 @@ A Joystick represents a USB controller, plugged into the Driver Station laptop. 
 For any controller, make sure to write down its button numbers, axis numbers, and which axes are inverted. Also check for a switch on the back, to see if it switches the controller type.
 Access this information by plugging it into the computer, and looking at the Joysticks tab on FRC Driver Station.
 
-Its buttons can be accessed with:
+Joystick Buttons
+^^^^^^^^^^^^^^^^
+
+Joystick buttons can be accessed with:
 
 .. code-block:: java
 
     joystick.getRawButton(int buttonNumber)
 	
 This returns true if the button is pressed down, and false if it is not. However, we normally use event handlers to manage button presses, instead of getRawButton.
+
+To attach a command to a certain button press, first create a Button. Then attach a command to it.
+
+Example:
+
+.. code-block:: java
+    
+    // keep track of the B button on the operator's controller in code
+    Button closeClawButton = new JoystickButton(operator, 2);
+
+    // start the command CloseClaw() whenever the operator's B button is pressed
+    closeClawButton.whenPressed(new CloseClaw());
+
+In addition to whenPressed, you can also attach commands to whenReleased, whileHeld, etc, although this can be finicky at times and lead to weird behavior.
+
+Joystick Axes
+^^^^^^^^^^^^^
 
 When it comes to thumbsticks on a controller, or any other free moving component of the joystick, these are accessed by:
 
@@ -60,6 +80,9 @@ Then, to use the deadzoning function:
 Often, axes are flipped on the controller, which cause up to be negative and down to be positive. Firstly, check for a switch on the back of the controller that will switch its controller mode, which will often fix this issue. If there isn’t one, then just flip it manually in code.
 
 Sometimes, the triggers are seen as axes instead of buttons. Firstly, check for a switch on the back of the controller that will switch its controller mode, which will often fix this issue. If there isn’t one, either make your own custom button handler, or implement the Button interface.
+
+Joystick POV
+^^^^^^^^^^^^
 
 Very rarely, the POV (known as a D-pad) is used.
 Use:

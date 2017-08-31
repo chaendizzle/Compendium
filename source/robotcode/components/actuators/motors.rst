@@ -26,11 +26,11 @@ There are several types of speed controllers.
 	.. image:: ./_static/217-8080.jpg
 		:width: 30%
 	
-	Uses a CAN channel, configured in the RoboRIO web dashboard.
+	This uses the CANTalon class in code, and uses a CAN channel, configured in the RoboRIO web dashboard.
 	Talons can be given brake mode or coast mode.
 	They can also be configured to respond to a limit switch directly, but this is rarely used.
 
- - Victor
+ - Victor or VictorSP
 	
 	.. image:: ./_static/217-9090.jpg
 		:width: 30%
@@ -61,19 +61,38 @@ Examples:
 
 .. code-block:: java
 
+<<<<<<< HEAD
 	Talon DRIVE_LEFT_FRONT = new Talon(3);
 
 	Victor DRIVE_RIGHT_FRONT = new Victor(3);
 
 	Spark CLIMBER_MOTOR = new Spark(4);
+=======
+	CANTalon DRIVE_LEFT_FRONT = new CANTalon(3);
+	// or
+	Victor DRIVE_LEFT_FRONT = new Victor(3);
+>>>>>>> origin/master
 
-	
+Note that if a speed controller or motor's wiring is flipped, it will run backwards. This means that when you set it to 1.0, the motor will actually run full power in reverse. It is recommended that electrical fixes this in the wiring of the robot, but sometimes this is not possible due to time constraints. If so, remember that you can always use:
+
+.. code-block:: java
+
+	speedController.setInverted(true);
+
+This flips the speed controller in code, fixing the problem.
+
 Make sure to be familiar with the status light meanings of each speed controller. It can really help in certain debugging situations.
 `Status light reference <https://wpilib.screenstepslive.com/s/4485/m/24166/l/144972-status-light-quick-reference>`_
 
 Also note that speed controllers can break down. If you observe any odd behavior, such as a speed controller moving a motor when the robot is disabled, first check for any wire shorts, bad crimps, and the like. If it is certain that there are no electrical problems, then the speed controller may be broken.
 
 For Talon SRX’s, make sure to update the firmware before inspection at competitions, otherwise the inspector might not be happy.
+
+When debugging code related to speed controllers, it is helpful to look at the speed controller LED lights. For example, if the speed controller is flashing full green, but the motor is not moving, it may instead be an electrical problem.
+
+For more information on speed controllers, see `WPILib's documentation on speed controllers <https://wpilib.screenstepslive.com/s/4485/m/13809/l/599702-driving-motors-with-speed-controller-objects-victors-talons-and-jaguars>`_.
+
+For more information on CAN, see `WPILib's documentation on using CAN devices <https://wpilib.screenstepslive.com/s/4485/m/13809/c/88896>`_.
 
 .. toctree::
 	:glob:

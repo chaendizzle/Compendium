@@ -1,12 +1,15 @@
-.. Evans Chen's Software Guide documentation master file, created by
-   sphinx-quickstart on Sun Jul 30 20:02:39 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Evans Chen's Software Guide!
 =======================================
 
 This is Evans Chen’s compendium of software knowledge accumulated while he was on the team. Hopefully, this short collection of information can serve software for future generations.
+
+This guide is designed to build on `WPILib's screenstepslive documentation <https://wpilib.screenstepslive.com/s/4485/m/13809>`_.
+
+For example, the screenstepslive documentation has many examples using the Iterative Robot design, but our team uses the Command-based Robot design, since it scales well for larger projects. Additionally, the screenstepslive documentation pushes the RobotDrive class, which is much less flexible than implementing your own drive command.
+
+However, if an adequate explanation is already provided in the screenstepslive documentation, I will simply provide a link to it.
+
+Also, don't forget that the `WPILibJ Javadoc <http://first.wpi.edu/FRC/roborio/release/docs/java/>`_ is also a useful resource.
 
 .. toctree::
 	:glob:
@@ -17,3 +20,4 @@ This is Evans Chen’s compendium of software knowledge accumulated while he was
 	installation/installation
 	robotcode/robotcode
 	tasks/tasks
+	svn/svn

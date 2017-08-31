@@ -9,6 +9,7 @@ This guide assumes that the reader has knowledge of java basics, such as objects
 	:glob:
 	:maxdepth: 10
 	:caption: Contents:
+	:titlesonly:
 	
 	structure/structure
 	components/components

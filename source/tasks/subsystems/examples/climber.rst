@@ -9,24 +9,24 @@ Start out by `creating the subsystem file <./../subsystems.html#create-the-subsy
 
 .. code-block:: java
 
-	/**
-	 *
-	 */
-	public class Climber extends Subsystem {
+    /**
+     *
+     */
+    public class Climber extends Subsystem {
 
-	    // Put methods for controlling this subsystem
-	    // here. Call these from Commands.
+        // Put methods for controlling this subsystem
+        // here. Call these from Commands.
 
-	    public Climber()
-	    {
+        public Climber()
+        {
 
-	    }
+        }
 
-	    public void initDefaultCommand() {
-	        // Set the default command for a subsystem here.
-	        //setDefaultCommand(new MySpecialCommand());
-	    }
-	}
+        public void initDefaultCommand() {
+            // Set the default command for a subsystem here.
+            //setDefaultCommand(new MySpecialCommand());
+        }
+    }
 
 Now, create the Victor that represents the climber motor.
 
@@ -65,11 +65,11 @@ Final code
 
 .. code-block:: java
 
-	/**
-	 * Climber subsystem
-	 */
-	 public class Climber extends Subsystem
-	 {
+    /**
+     * Climber subsystem
+     */
+    public class Climber extends Subsystem
+    {
 
         private static Victor CLIMBER_MOTOR;
 
@@ -87,7 +87,7 @@ Final code
         {
             CLIMBER_MOTOR.set(value);
         }
-	}
+    }
 
 .. toctree::
 	:glob:
