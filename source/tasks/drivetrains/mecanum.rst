@@ -11,7 +11,7 @@ Since the wheels have slanted rollers, by turning the wheels against each other,
 .. image:: ./_static/mecanum2.png
 	:width: 100%
 
-This extraability to strafe gives a robot some more mobility. However, since there are still rollers on every wheel, mecanum drive robots are usually more easily pushed around by other robots, and thus will not excel at defense. Mecanum drive robots also have less pushing power, since the wheels are designed to slip to allow strafing movement.
+This extra ability to strafe gives a robot some more mobility. However, since there are still rollers on every wheel, mecanum drive robots are usually more easily pushed around by other robots, and thus will not excel at defense. Mecanum drive robots also have less pushing power, since the wheels are designed to slip to allow strafing movement.
 
 This type of drive train would be used in a robot where mobility is valued over speed and pushing power.
 
@@ -47,7 +47,7 @@ Create the 4 motors and the 4 encoders by declaring them in the class and initia
 
         public Drive()
         {
-            // Left Motors
+            // Motors
             LEFT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_FRONT_DRIVE_MOTOR_PIN);
             LEFT_BACK_DRIVE_MOTOR = new CANTalon(RobotMap.LEFT_BACK_DRIVE_MOTOR_PIN);
             RIGHT_FRONT_DRIVE_MOTOR = new CANTalon(RobotMap.RIGHT_FRONT_DRIVE_MOTOR_PIN);
@@ -56,9 +56,9 @@ Create the 4 motors and the 4 encoders by declaring them in the class and initia
             // Encoders
             LEFT_FRONT_DRIVE_ENCODER = new Encoder(RobotMap.LEFT_FRONT_DRIVE_ENCODER_PIN_A, RobotMap.LEFT_FRONT_DRIVE_ENCODER_ENCODER_PIN_B);
             LEFT_BACK_DRIVE_ENCODER = new Encoder(RobotMap.LEFT_BACK_DRIVE_ENCODER_PIN_A, RobotMap.LEFT_BACK_DRIVE_ENCODER_PIN_B);
-            RIGHT_FRONT_DRIVE_MOTOR = new Encoder(RobotMap.RIGHT_FRONT_DRIVE_ENCODER_PIN_A, RobotMap.RIGHT_FRONT_DRIVE_ENCODER_ENCODER_PIN_B);
-            RIGHT_BACK_DRIVE_MOTOR = new Encoder(RobotMap.RIGHT_BACK_DRIVE_ENCODER_PIN_A, RobotMap.RIGHT_BACK_DRIVE_ENCODER_PIN_B);
-            DRIVE_ENCODERS = new MedianPIDSource(LEFT_FRONT_DRIVE_ENCODER, LEFT_BACK_DRIVE_ENCODER, RIGHT_FRONT_DRIVE_MOTOR, RIGHT_BACK_DRIVE_MOTOR);
+            RIGHT_FRONT_DRIVE_ENCODER = new Encoder(RobotMap.RIGHT_FRONT_DRIVE_ENCODER_PIN_A, RobotMap.RIGHT_FRONT_DRIVE_ENCODER_ENCODER_PIN_B);
+            RIGHT_BACK_DRIVE_ENCODER = new Encoder(RobotMap.RIGHT_BACK_DRIVE_ENCODER_PIN_A, RobotMap.RIGHT_BACK_DRIVE_ENCODER_PIN_B);
+            DRIVE_ENCODERS = new MedianPIDSource(LEFT_FRONT_DRIVE_ENCODER, LEFT_BACK_DRIVE_ENCODER, RIGHT_FRONT_DRIVE_ENCODER, RIGHT_BACK_DRIVE_ENCODER);
 
             // Gyro
             DRIVE_GYRO = new AHRS(RobotMap.MXP_PORT);
