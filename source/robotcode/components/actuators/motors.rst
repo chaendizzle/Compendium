@@ -61,17 +61,11 @@ Examples:
 
 .. code-block:: java
 
-<<<<<<< HEAD
-	Talon DRIVE_LEFT_FRONT = new Talon(3);
+	CANTalon DRIVE_LEFT_FRONT = new CANTalon(3);
 
 	Victor DRIVE_RIGHT_FRONT = new Victor(3);
 
 	Spark CLIMBER_MOTOR = new Spark(4);
-=======
-	CANTalon DRIVE_LEFT_FRONT = new CANTalon(3);
-	// or
-	Victor DRIVE_LEFT_FRONT = new Victor(3);
->>>>>>> origin/master
 
 Note that if a speed controller or motor's wiring is flipped, it will run backwards. This means that when you set it to 1.0, the motor will actually run full power in reverse. It is recommended that electrical fixes this in the wiring of the robot, but sometimes this is not possible due to time constraints. If so, remember that you can always use:
 
