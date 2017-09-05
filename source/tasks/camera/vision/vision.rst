@@ -33,7 +33,9 @@ After choosing a platform, you must choose between the two main ways of writing 
  - `OpenCV <http://opencv.org/>`_
     OpenCV is an open source machine vision library. I would recommend using the Python programming language, so if you don't know Python and don't want to learn it, I would stick with GRIP. If you already know Python, however, using OpenCV offers a lot of flexibility and customization that GRIP does not offer.
 
-Since `WPILib's documentation already covers using GRIP <https://wpilib.screenstepslive.com/s/4485/m/24194/c/194953>`_, I will cover what to install on a Raspberry Pi and how to use OpenCV.
+Since `WPILib's documentation already covers using GRIP <https://wpilib.screenstepslive.com/s/4485/m/24194/c/194953>`_, I will cover how to install OpenCV on a Raspberry Pi.
+
+On how to actually use OpenCV, here's a link to an amazing guide called `FRC Programming Done Right <http://frc-pdr.readthedocs.io/en/latest/index.html>`_. I currently don't have the resources nor the time to actually write a guide on it myself, since college is starting.
 
 .. toctree::
 	:glob:
@@ -41,5 +43,4 @@ Since `WPILib's documentation already covers using GRIP <https://wpilib.screenst
 	:caption: Contents
 
 	rpinstall
-	example
 
