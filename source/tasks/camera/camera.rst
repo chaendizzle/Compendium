@@ -9,3 +9,4 @@ This section discusses how to use cameras, whether it be adding USB cameras to S
 	:caption: Contents
 
 	teleopcam
+	vision/vision
