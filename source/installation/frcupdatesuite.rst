@@ -1,7 +1,7 @@
 National Instruments FRC Update Suite
 =====================================
 
-All software laptops will need the NI FRC Update Suite, since it contains Driver Station and other tools necessary to run the robot.
+All programming laptops will need the NI FRC Update Suite, since it contains Driver Station and other tools necessary to run the robot.
 
 Instructions for installing can be found on screenstepslive, usually on a page titled “Installing the FRC 20XX Update Suite” where XX is school year.
 

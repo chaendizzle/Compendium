@@ -1,7 +1,7 @@
-Welcome to Evans Chen's Software Guide!
+Welcome to Team 6624's Software Guide!
 =======================================
 
-This is Evans Chen’s compendium of software knowledge accumulated while he was on the team. Hopefully, this short collection of information can serve software for future generations.
+This is Team 6624’s compendium of software knowledg. Hopefully, this short collection of information can serve software for future generations.
 
 This guide is designed to build on `WPILib's screenstepslive documentation <https://wpilib.screenstepslive.com/s/4485/m/13809>`_.
 

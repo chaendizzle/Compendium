@@ -15,6 +15,8 @@ Example:
 
 	Encoder enc = new Encoder(3, 4);
 
+Where 3 and 4 are the 2 DIO pins used (note that order does matter).
+
 Since Encoders are NOT absolute position sensors, they reset to 0 whenever the robot starts.
 
 Encoders are one of the most commonly used sensors, simply because any motor often uses an encoder to control its movement.
