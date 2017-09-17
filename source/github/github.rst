@@ -15,10 +15,8 @@ GitHub also has the ability to let users track bugs and issues, set project goal
 	:caption: Contents:
 	
 	generalUse
-	beyondcompare
-	frcupdatesuite
-	silverlight
-	roborio
+	issueTracking
+	branches
 
 
 .. [1] Open Source code is code that is made available to anyone, and usually licensed so anyone can use that code in their own projects

@@ -1,7 +1,7 @@
 Welcome to Team 6624's Software Guide!
 =======================================
 
-This is Team 6624’s compendium of software knowledg. Hopefully, this short collection of information can serve software for future generations.
+This is Team 6624’s compendium of software knowledge. Hopefully, this short collection of information can serve software for future generations.
 
 This guide is designed to build on `WPILib's screenstepslive documentation <https://wpilib.screenstepslive.com/s/4485/m/13809>`_.
 
@@ -20,4 +20,4 @@ Also, don't forget that the `WPILibJ Javadoc <http://first.wpi.edu/FRC/roborio/r
 	installation/installation
 	robotcode/robotcode
 	tasks/tasks
-	svn/svn
+	github/github
