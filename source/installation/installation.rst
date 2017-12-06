@@ -15,7 +15,7 @@ I assume you’re smart enough to click the big download button and install soft
 	
 	eclipse
 	github
-	beyondcompare
+	winmerge
 	frcupdatesuite
 	silverlight
 	roborio
