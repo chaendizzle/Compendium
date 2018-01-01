@@ -30,11 +30,11 @@ There are 2 variants of Raspbain, the full version with a Desktop and a Lite ver
 
 To Flash the Pi with Raspbain:
 
-1. Download a copy of the raspbian image from `here <https://www.raspberrypi.org/downloads/raspbian/>`_, choosing either the desktop or lite variant
+1. Download a copy of the `raspbian image from here <https://www.raspberrypi.org/downloads/raspbian/>`_, choosing either the desktop or lite variant
 
-1. Obtain a microSD card that's at least 8 GB (16 GB recommended for easier installation of OpenCV).
+2. Obtain a microSD card that's at least 8 GB (16 GB recommended for easier installation of OpenCV).
 
-2. Download a copy of `Etcher <https://etcher.io/>`_ and follow the instructions to select the SD card and raspbian image.
+3. Download a copy of `Etcher <https://etcher.io/>`_ and follow the instructions to select the SD card and raspbian image.
 
 4. Flash the SD card with Etcher
 
