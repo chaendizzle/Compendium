@@ -20,30 +20,34 @@ To power the raspberry pi, you'll need a mini USB power cable (the type of charg
 Installing Raspbian
 -------------------
 
-If you don't already have a microSD card with Raspbian on it, you will have to create one. The minimum SD card size to install Rasbian with NOOBS is 8 GB, but if you don't want to have to deal with mounting a flash drive to download OpenCV, you will want a 16 GB microSD card.
+If you don't already have a microSD card with Raspbian on it, you will have to create one. The minimum SD card size to install Rasbian is 8 GB, but if you don't want to have to deal with mounting a flash drive to download OpenCV, you will want a 16 GB microSD card.
 
-If the Raspberry Pi boots up and shows the desktop, then Raspbian is already installed and you can skip this section.
+If the Raspberry Pi boots up and shows the desktop and/or a command line, then Raspbian is already installed and you can skip this section.
 
-`Instructions for installing Raspbian with NOOBS can be found here <https://www.raspberrypi.org/documentation/installation/noobs.md>`_, but they are also repeated in this guide.
+There are 2 variants of Raspbain, the full version with a Desktop and a Lite version that is just a command line. The Lite version is reccomended.
+
+`Instructions for installing Raspbian with NOOBS (a very large but streamlined installer) can be found here <https://www.raspberrypi.org/documentation/installation/noobs.md>`_, but it's reccomended that you just directly flash the Pi with a raspbian image.
+
+To Flash the Pi with Raspbain:
+
+1. Download a copy of the raspbian image from `here <https://www.raspberrypi.org/downloads/raspbian/>`_, choosing either the desktop or lite variant
 
 1. Obtain a microSD card that's at least 8 GB (16 GB recommended for easier installation of OpenCV).
 
-2. Format the SD card to **FAT** using the `SD Card Formatter Tool <https://www.sdcard.org/downloads/formatter_4/>`_. Make ure that **FORMAT SIZE ADJUSTMENT** option is set to **ON**.
+2. Download a copy of `Etcher <https://etcher.io/>`_ and follow the instructions to select the SD card and raspbian image.
 
-3. `Download the NOOBS zip file <https://www.raspberrypi.org/downloads/>`_.
-
-4. Extract it to the SD card. Make sure that the files are at the root directory of the SD card.
+4. Flash the SD card with Etcher
 
 5. Put the SD card in the Raspberry Pi and boot it up. To turn on the raspberry pi, you only need to plug it in.
 
-6. Once the raspberry pi has booted up and you can see the NOOBS menu, follow the instructions to install Raspbian with PIXEL. You don't need an internet connection to install.
+Once the raspberry pi has booted up and you can see the command line or the desktop, you're done.
 
 That should be it for installing Raspbian. 
 
 Installing OpenCV
 -----------------
 
-Since Python already comes installed with the Raspbian with NOOBS install above, we don't need to install Python. However, we do need to install OpenCV.
+Since Python already comes installed with Raspbian, we don't need to install Python. However, we do need to install OpenCV.
 
 To do so, follow the instructions `here <https://github.com/Tes3awy/OpenCV-3.2.0-Compiling-on-Raspberry-Pi>`_.
 
