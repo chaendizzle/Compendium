@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Evans Chen\'s Software Guide'
+project = u'Team 6624\'s Software Guide'
 #copyright = u'No one'
 author = u'Evans Chen and Nic Hodlofski'
 

@@ -35,16 +35,18 @@ There are several types of speed controllers.
 	.. image:: ./_static/217-9090.jpg
 		:width: 30%
 	
-	The speed controller we often use the most. Connected via PWM.
+	The speed controller often used in FRC. Connected via PWM.
 	
  - SPARK
 	
 	.. image:: ./_static/spark.jpg
 		:width: 30%
 	
-	A low cost speed controller that we usually don’t use. Connected via PWM.
+	A low cost speed controller that we usually use. Connected via PWM.
 	Use it just like a Victor, except use the SPARK type.
 	
+TODO: Replace this with the old controllers from our 2008 bot
+
  - Jaguar
  
 	.. image:: ./_static/mickjaguar.png

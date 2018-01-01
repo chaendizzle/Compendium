@@ -1,0 +1,1 @@
+This folder contains all of the gfx for the documentation of the old version of github that is no longer used.

@@ -8,6 +8,8 @@ Joysticks
 
 A Joystick represents a USB controller, plugged into the Driver Station laptop. It is given a port, which corresponds to its port assigned on the FRC Driver Station program.
 
+A Joystick can be an Xbox controller, a Logitech joystick, a guitar hero controller, or even a dance pad. We usually use the xbox controller.
+
 For any controller, make sure to write down its button numbers, axis numbers, and which axes are inverted. Also check for a switch on the back, to see if it switches the controller type.
 Access this information by plugging it into the computer, and looking at the Joysticks tab on FRC Driver Station.
 

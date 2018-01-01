@@ -1,11 +1,9 @@
 WinMerge
-========
+=================
 
-All software laptops should have WinMerge, since sometimes TortoiseMerge (which comes with TortoiseSVN) just doesn’t do the trick, especially when manually merging code.
+All programming computers should have WinMerge, as GitHub automerging doesnt always work when there are commit confilicts. WinMerge is a prett awesome tool for merging deifferent copies of the same codebase.
 
-It makes Code Arch’s job a lot easier.
-
-`Download and install the latest version of WinMerge. <http://winmerge.org/?lang=en>`_
+`Download and install the latest version of WinMerge. <http://winmerge.org/downloads/>`_
 
 .. toctree::
 	:glob:
