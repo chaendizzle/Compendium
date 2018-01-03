@@ -7,9 +7,3 @@ GitHub Desktop is a tool for synchronising code with public and private repositi
 There are versions available for mac and windows, with official linux support expected soon.
 
 It can be found `here. <https://desktop.github.com/>`_
-
-
-.. toctree::
-	:glob:
-	:maxdepth: 10
-	:caption: Contents:
